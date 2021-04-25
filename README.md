@@ -1,13 +1,11 @@
 <p align="center"><img src="https://flarum.org/assets/img/logo.png"></p>
 
 <p align="center">
-<a href="https://github.com/flarum/core/actions?query=workflow%3ATests"><img src="https://github.com/flarum/core/workflows/Tests/badge.svg" alt="PHP Tests"></a>
-<a href="https://packagist.org/packages/flarum/core"><img src="https://img.shields.io/packagist/dt/flarum/core" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/flarum/core"><img src="https://img.shields.io/github/v/release/flarum/core?sort=semver" alt="Latest Version"></a>
-<a href="https://packagist.org/packages/flarum/core"><img src="https://img.shields.io/packagist/l/flarum/core" alt="License"></a>
-<a href="https://github.styleci.io/repos/28257573"><img src="https://github.styleci.io/repos/28257573/shield?style=flat" alt="StyleCI"></a>
+<a href="https://travis-ci.org/flarum/core"><img src="https://travis-ci.org/flarum/core.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/flarum/core"><img src="https://poser.pugx.org/flarum/core/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/flarum/core"><img src="https://poser.pugx.org/flarum/core/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/flarum/core"><img src="https://poser.pugx.org/flarum/core/license.svg" alt="License"></a>
 </p>
-
 
 ## About Flarum
 
@@ -19,18 +17,29 @@
 
 * **Powerful and extensible.** Customize, extend, and integrate Flarum to suit your community. Flarum’s architecture is amazingly flexible, with a powerful Extension API.
 
+![screenshot](https://flarum.org/assets/img/home-screenshot.png)
+
 ## Installation
 
-This repository contains Flarum's core code. If you want to set up a forum, visit the [Flarum skeleton repository](https://github.com/flarum/flarum).
+You must have SSH access to a server with **PHP 7.2+** and **MySQL 5.6+**, and install [Composer](https://getcomposer.org/).
+
+```
+composer create-project flarum/flarum . --stability=beta
+```
+
+Read the **[Installation guide](https://flarum.org/docs/install.html)** for more information. For support, refer to the [documentation](https://flarum.org/docs/), and ask questions on the [community forum](https://discuss.flarum.org/) or [Discord chat](https://flarum.org/discord/).
 
 ## Contributing
 
 Thank you for considering contributing to Flarum! Please read the **[Contributing guide](https://flarum.org/docs/contributing.html)** to learn how you can help.
 
+This repository only holds the Flarum skeleton application. Most development happens in [flarum/core](https://github.com/flarum/core).
+
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Flarum, please send an e-mail to [security@flarum.org](mailto:security@flarum.org). All security vulnerabilities will be promptly addressed. More details can be found in our [security policy](https://github.com/flarum/core/security/policy).
+If you discover a security vulnerability within Flarum, please send an e-mail to [security@flarum.org](mailto:security@flarum.org). All security vulnerabilities will be promptly addressed.
 
 ## License
 
 Flarum is open-source software licensed under the [MIT License](https://github.com/flarum/flarum/blob/master/LICENSE).
+
