@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit3aad0a8df9597033d177dd35b7686068
+class ComposerStaticInit67cc182236b4b5955acc1005d45a669b
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -79,6 +79,10 @@ class ComposerStaticInit3aad0a8df9597033d177dd35b7686068
         array (
             'Whoops\\' => 7,
         ),
+        'V' => 
+        array (
+            'V17Development\\FlarumSeo\\' => 25,
+        ),
         'T' => 
         array (
             'Tobscure\\JsonApi\\' => 17,
@@ -128,6 +132,10 @@ class ComposerStaticInit3aad0a8df9597033d177dd35b7686068
         'O' => 
         array (
             'Opis\\Closure\\' => 13,
+        ),
+        'N' => 
+        array (
+            'Nearata\\EmbedVideo\\' => 19,
         ),
         'M' => 
         array (
@@ -253,6 +261,10 @@ class ComposerStaticInit3aad0a8df9597033d177dd35b7686068
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'V17Development\\FlarumSeo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/v17development/flarum-seo/src',
         ),
         'Tobscure\\JsonApi\\' => 
         array (
@@ -395,6 +407,10 @@ class ComposerStaticInit3aad0a8df9597033d177dd35b7686068
         'Opis\\Closure\\' => 
         array (
             0 => __DIR__ . '/..' . '/opis/closure/src',
+        ),
+        'Nearata\\EmbedVideo\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nearata/flarum-ext-embed-video/src',
         ),
         'Monolog\\' => 
         array (
@@ -664,10 +680,10 @@ class ComposerStaticInit3aad0a8df9597033d177dd35b7686068
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit3aad0a8df9597033d177dd35b7686068::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit3aad0a8df9597033d177dd35b7686068::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit3aad0a8df9597033d177dd35b7686068::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit3aad0a8df9597033d177dd35b7686068::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit67cc182236b4b5955acc1005d45a669b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit67cc182236b4b5955acc1005d45a669b::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit67cc182236b4b5955acc1005d45a669b::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit67cc182236b4b5955acc1005d45a669b::$classMap;
 
         }, null, ClassLoader::class);
     }

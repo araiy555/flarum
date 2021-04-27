@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3aca51d83b70d8a04ba8e5df93ddf48a",
+    "content-hash": "4e3d160722ce193f0a9b3a693bb2de11",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -939,16 +939,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.12.0",
+            "version": "2.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "d501fd2658d55491a2295ff600ae5978eaad7403"
+                "reference": "c13c0be93cff50f88bbd70827d993026821914dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/d501fd2658d55491a2295ff600ae5978eaad7403",
-                "reference": "d501fd2658d55491a2295ff600ae5978eaad7403",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/c13c0be93cff50f88bbd70827d993026821914dd",
+                "reference": "c13c0be93cff50f88bbd70827d993026821914dd",
                 "shasum": ""
             },
             "require": {
@@ -1002,7 +1002,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-30T12:00:00+00:00"
+            "time": "2021-04-25T12:00:00+00:00"
         },
         {
             "name": "flarum/approval",
@@ -2026,16 +2026,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1"
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/35ea11d335fd638b5882ff1725228b3d35496ab1",
-                "reference": "35ea11d335fd638b5882ff1725228b3d35496ab1",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/dc960a912984efb74d0a90222870c72c87f10c91",
+                "reference": "dc960a912984efb74d0a90222870c72c87f10c91",
                 "shasum": ""
             },
             "require": {
@@ -2093,7 +2093,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2021-03-21T16:25:00+00:00"
+            "time": "2021-04-26T09:17:50+00:00"
         },
         {
             "name": "illuminate/bus",
@@ -4193,6 +4193,65 @@
                 }
             ],
             "time": "2020-12-14T12:56:38+00:00"
+        },
+        {
+            "name": "nearata/flarum-ext-embed-video",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nearata/flarum-ext-embed-video.git",
+                "reference": "f579a62f56469b719a0ca2d6f8c75af71c3301dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nearata/flarum-ext-embed-video/zipball/f579a62f56469b719a0ca2d6f8c75af71c3301dc",
+                "reference": "f579a62f56469b719a0ca2d6f8c75af71c3301dc",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": ">=0.1.0-beta.16 <=0.1.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Embed Video",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-cat",
+                        "backgroundColor": "#ffb000",
+                        "color": "#fff"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nearata\\EmbedVideo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "William Di Cicco",
+                    "email": "williamdicicco@protonmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Allow users to embed video using DPlayer and BBCode",
+            "keywords": [
+                "bbcode",
+                "dplayer",
+                "embed",
+                "flarum",
+                "flv",
+                "hls",
+                "shaka",
+                "video",
+                "webtorrent"
+            ],
+            "time": "2021-04-16T12:38:31+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -7118,6 +7177,62 @@
             "time": "2021-03-06T07:59:01+00:00"
         },
         {
+            "name": "takumi9942/flarum-ext-japanese",
+            "version": "v2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/takumi9942/flarum-ext-japanese.git",
+                "reference": "7f6b786a3ad29f1cc4a4e68d3844af9524c57574"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/takumi9942/flarum-ext-japanese/zipball/7f6b786a3ad29f1cc4a4e68d3844af9524c57574",
+                "reference": "7f6b786a3ad29f1cc4a4e68d3844af9524c57574",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.16"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Japanese",
+                    "category": "language",
+                    "info": {
+                        "donate": "https://flarum.org/donate/",
+                        "website": "https://flarum.org",
+                        "support": "https://discuss.flarum.org"
+                    },
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundColor": "#00247d",
+                        "backgroundSize": "cover",
+                        "backgroundPosition": "center"
+                    }
+                },
+                "flarum-locale": {
+                    "code": "ja",
+                    "title": "Japanese"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "takumi9942",
+                    "homepage": "https://github.com/takumi9942"
+                }
+            ],
+            "description": "Japanese language pack.",
+            "keywords": [
+                "japanese",
+                "locale"
+            ],
+            "time": "2021-03-16T11:45:31+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "2.2.3",
             "source": {
@@ -7215,6 +7330,65 @@
                 "standard"
             ],
             "time": "2016-03-31T09:25:28+00:00"
+        },
+        {
+            "name": "v17development/flarum-seo",
+            "version": "v1.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/v17development/flarum-seo.git",
+                "reference": "877e8bb776d7ddfe8ed5b1d9f0a6e88b9f961c82"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/v17development/flarum-seo/zipball/877e8bb776d7ddfe8ed5b1d9f0a6e88b9f961c82",
+                "reference": "877e8bb776d7ddfe8ed5b1d9f0a6e88b9f961c82",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "flarum/core": "^0.1.0-beta.16"
+            },
+            "conflict": {
+                "franzl/flarum-open-links-in-new-tab": "*",
+                "zerosonesfun/elint": "*"
+            },
+            "suggest": {
+                "fof/sitemap": "Allows you to generate powerful sitemap.xml files"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "SEO",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-check",
+                        "backgroundColor": "#0072ff",
+                        "color": "#ffffff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18316"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "V17Development\\FlarumSeo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "V17 Development",
+                    "email": "info@v17.dev"
+                }
+            ],
+            "description": "Adds SEO tags for your Flarum forum",
+            "homepage": "https://v17.dev/projects/flarum-seo",
+            "time": "2021-03-21T12:44:53+00:00"
         },
         {
             "name": "voku/portable-ascii",
