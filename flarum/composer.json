@@ -21,6 +21,7 @@
         "docs": "https://flarum.org/docs/"
     },
     "require": {
+        "ext-gd": "*",
         "flarum/approval": "^0.1.0",
         "flarum/bbcode": "^0.1.0",
         "flarum/core": "^0.1.0",
