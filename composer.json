@@ -40,6 +40,7 @@
         "flarum/suspend": "^0.1.0",
         "flarum/tags": "^0.1.0",
         "nearata/flarum-ext-embed-video": "^2.1",
+        "s9e/flarum-ext-mediaembed": "*",
         "takumi9942/flarum-ext-japanese": "^2.2",
         "v17development/flarum-seo": "^1.7"
     },
