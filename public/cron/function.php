@@ -35,15 +35,15 @@ function discussions($dbh, $title) {
 		1,
 		1,
 		current_timestamp,
-		1,
-		1,
+		4,
+		4,
 		current_timestamp,
-		1,
-		1,
+		4,
+		4,
 		1,
 		null,
 		null,
-		'test',
+		'news',
 		0,
 		1,
 		0,
@@ -75,7 +75,7 @@ function post($dbh, $discussion_insert_id, $comment) {
 		$discussion_insert_id, 
 		1, 
 		current_timestamp,
-		1,
+		4,
 		'comment',
 		'<t><p>$comment</p></t>',
 		null,
@@ -105,7 +105,7 @@ function updateUser($dbh) {
 UPDATE users
 SET   discussion_count = discussion_count + 1,
       comment_count = comment_count + 1
-WHERE  id = 1;
+WHERE  id = 4;
     ";
     $dbh->query($sql);
 }
@@ -117,7 +117,7 @@ function discussionTag($dbh, $discussion_insert_id) {
 	  tag_id
 	) VALUES (
 		$discussion_insert_id, 
-		1
+		4
 	)";
     $dbh->query($sql);
 }
