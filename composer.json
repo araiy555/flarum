@@ -22,6 +22,7 @@
     },
     "require": {
         "ext-gd": "*",
+        "clarkwinkelmann/flarum-ext-quiz-polls": "^0.1.0",
         "flarum/approval": "^0.1.0",
         "flarum/bbcode": "^0.1.0",
         "flarum/core": "^0.1.0",
@@ -41,6 +42,9 @@
         "flarum/tags": "^0.1.0",
         "fof/formatting": "^0.4.0",
         "fof/pages": "^0.7.0",
+        "fof/share-social": "^0.3.1",
+        "fof/upload": "^0.14.0",
+        "matpompili/flarum-favicon": "^1.0@beta",
         "nearata/flarum-ext-embed-video": "^2.1",
         "s9e/flarum-ext-mediaembed": "*",
         "takumi9942/flarum-ext-japanese": "^2.2",
