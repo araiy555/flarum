@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "17f16e77074ccf8c96a6688a3c78f470",
+    "content-hash": "d26480c2a33b559bcb95f46bf27e7b93",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -2147,6 +2147,74 @@
             "time": "2021-03-16T11:04:38+00:00"
         },
         {
+            "name": "fof/links",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/links.git",
+                "reference": "3aba6d3d04edf6cdb1dbf2a76e625ff2d19dcddc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/links/zipball/3aba6d3d04edf6cdb1dbf2a76e625ff2d19dcddc",
+                "reference": "3aba6d3d04edf6cdb1dbf2a76e625ff2d19dcddc",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.16"
+            },
+            "replace": {
+                "sijad/flarum-ext-links": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Links",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-bars",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/18335"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Links\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sajjad Hashemian",
+                    "email": "wolaws@gmail.com"
+                },
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Manage Flarum primary navbar menu links",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2021-03-16T11:34:10+00:00"
+        },
+        {
             "name": "fof/pages",
             "version": "0.7.0",
             "source": {
@@ -4135,16 +4203,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "19a9673b833cc37770439097b381d86cd125bfe8"
+                "reference": "2651c497f005de305c7ba3f232cbd87b8c00ee8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/19a9673b833cc37770439097b381d86cd125bfe8",
-                "reference": "19a9673b833cc37770439097b381d86cd125bfe8",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/2651c497f005de305c7ba3f232cbd87b8c00ee8c",
+                "reference": "2651c497f005de305c7ba3f232cbd87b8c00ee8c",
                 "shasum": ""
             },
             "require": {
@@ -4226,7 +4294,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-01T19:00:49+00:00"
+            "time": "2021-05-08T16:08:00+00:00"
         },
         {
             "name": "league/flysystem",
@@ -5897,16 +5965,16 @@
         },
         {
             "name": "s9e/text-formatter",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/s9e/TextFormatter.git",
-                "reference": "d764e9e4ac70b9bc398afe15b45b27568aa3ff23"
+                "reference": "e81057d923f654f1fa6a5a6ed22c872723ff6c33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/d764e9e4ac70b9bc398afe15b45b27568aa3ff23",
-                "reference": "d764e9e4ac70b9bc398afe15b45b27568aa3ff23",
+                "url": "https://api.github.com/repos/s9e/TextFormatter/zipball/e81057d923f654f1fa6a5a6ed22c872723ff6c33",
+                "reference": "e81057d923f654f1fa6a5a6ed22c872723ff6c33",
                 "shasum": ""
             },
             "require": {
@@ -5933,7 +6001,7 @@
             },
             "type": "library",
             "extra": {
-                "version": "2.9.0"
+                "version": "2.9.1"
             },
             "autoload": {
                 "psr-4": {
@@ -5963,7 +6031,7 @@
                 "parser",
                 "shortcodes"
             ],
-            "time": "2021-04-17T23:41:09+00:00"
+            "time": "2021-05-09T00:43:29+00:00"
         },
         {
             "name": "softcreatr/php-mime-detector",

@@ -41,6 +41,7 @@
         "flarum/suspend": "^0.1.0",
         "flarum/tags": "^0.1.0",
         "fof/formatting": "^0.4.0",
+        "fof/links": "^0.6.0",
         "fof/pages": "^0.7.0",
         "fof/share-social": "^0.3.1",
         "fof/upload": "^0.14.0",
