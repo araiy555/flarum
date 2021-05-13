@@ -47,6 +47,7 @@
         "fof/share-social": "^0.3.1",
         "fof/upload": "^0.14.0",
         "matpompili/flarum-favicon": "^1.0@beta",
+        "michaelbelgium/flarum-discussion-views": "^6.0",
         "nearata/flarum-ext-embed-video": "^2.1",
         "s9e/flarum-ext-mediaembed": "*",
         "takumi9942/flarum-ext-japanese": "^2.2",
