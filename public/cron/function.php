@@ -123,3 +123,26 @@ function discussionTag($dbh, $discussion_insert_id) {
 }
 
 
+function discuussionTableDalete($dbh)
+{
+$sql = "set foreign_key_checks = 0";
+    $dbh->query($sql);
+    $sql = "truncate table discussion_tag";
+    $dbh->query($sql);
+    $sql = "truncate table discussion_user";
+    $dbh->query($sql);
+    $sql = "truncate table discussion_views";
+    $dbh->query($sql);
+    $sql = "truncate table discussions";
+    $dbh->query($sql);
+    $sql = "truncate table posts";
+    $dbh->query($sql);
+    $sql = "truncate table tags";
+    $dbh->query($sql);
+    $sql = "truncate table pages";
+    $dbh->query($sql);
+    $sql = "truncate table links";
+    $dbh->query($sql);
+    $sql = "set foreign_key_checks = 1";
+    $dbh->query($sql);
+}
