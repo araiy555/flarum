@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "61ab0fbf61587eca31ed28e5cbb4ecfb",
+    "content-hash": "1a80ad3acc43b3e42d3cf6fe0c4e6397",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -2559,6 +2559,80 @@
                 }
             ],
             "time": "2021-03-29T08:23:07+00:00"
+        },
+        {
+            "name": "fof/user-directory",
+            "version": "0.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/user-directory.git",
+                "reference": "59afed6882dcdf2d109a1c0326d169a471179cf6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/user-directory/zipball/59afed6882dcdf2d109a1c0326d169a471179cf6",
+                "reference": "59afed6882dcdf2d109a1c0326d169a471179cf6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "flarum/core": "^0.1.0-beta.16"
+            },
+            "replace": {
+                "flagrow/user-directory": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF User Directory",
+                    "category": "feature",
+                    "icon": {
+                        "name": "far fa-address-book",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/5682"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\UserDirectory\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "https://luceos.com/"
+                },
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                }
+            ],
+            "description": "The permission based public user directory extension for your Flarum forum.",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "extension",
+                "flarum",
+                "member list",
+                "user directory",
+                "user list"
+            ],
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2021-05-11T14:31:40+00:00"
         },
         {
             "name": "franzl/whoops-middleware",

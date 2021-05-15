@@ -46,6 +46,7 @@
         "fof/pretty-mail": "^0.4.0",
         "fof/share-social": "^0.3.1",
         "fof/upload": "^0.14.0",
+        "fof/user-directory": "^0.6.2",
         "matpompili/flarum-favicon": "^1.0@beta",
         "michaelbelgium/flarum-discussion-views": "^6.0",
         "nearata/flarum-ext-embed-video": "^2.1",
