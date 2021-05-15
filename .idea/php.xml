@@ -247,5 +247,4 @@
       <path value="$PROJECT_DIR$/flarum/vendor/nearata/flarum-ext-embed-video" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />
 </project>

@@ -143,6 +143,12 @@ $sql = "set foreign_key_checks = 0";
     $dbh->query($sql);
     $sql = "truncate table links";
     $dbh->query($sql);
+    $sql = "
+UPDATE users
+SET   discussion_count = 0,
+      comment_count =  0
+    ";
+    $dbh->query($sql);
     $sql = "set foreign_key_checks = 1";
     $dbh->query($sql);
 }
