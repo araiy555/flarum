@@ -149,6 +149,11 @@ SET   discussion_count = 0,
       comment_count =  0
     ";
     $dbh->query($sql);
+    $sql = "
+ SET @i := 0;
+UPDATE users SET id = (@i := @i +1)
+    ";
+    $dbh->query($sql);
     $sql = "set foreign_key_checks = 1";
     $dbh->query($sql);
 }
