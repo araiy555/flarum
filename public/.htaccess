@@ -13,11 +13,7 @@
   # RewriteRule ^flarum$ / [F,L]
   # RewriteRule ^storage/(.*)?$ / [F,L]
   # RewriteRule ^vendor/(.*)?$ / [F,L]
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
-RewriteCond %{HTTPS} !on
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
   # Pass requests that don't refer directly to files in the filesystem to index.php
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
@@ -133,3 +129,9 @@ Options -MultiViews
 <IfModule mod_headers.c>
   RequestHeader unset Proxy
 </IfModule>
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
