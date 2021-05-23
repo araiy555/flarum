@@ -8,7 +8,7 @@ if ($_SERVER['REMOTE_ADDR'] !== '192.168.33.1') {
     $path = substr($url["path"], 1);
     $user = $url["user"];
     $pass = $url["pass"];
-    $site_url = 'https://flarum.herokuapp.com';
+    $site_url = 'https://stocktown.jp/';
 } else {
     $host = 'localhost';
     $path = 'flarum';
