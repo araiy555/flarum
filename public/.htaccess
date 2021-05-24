@@ -20,6 +20,7 @@
   RewriteRule ^ index.php [QSA,L]
 </IfModule>
 
+
 # Disable directory listings
 Options -Indexes
 
