@@ -13,9 +13,6 @@
   # RewriteRule ^flarum$ / [F,L]
   # RewriteRule ^storage/(.*)?$ / [F,L]
   # RewriteRule ^vendor/(.*)?$ / [F,L]
-RewriteEngine On
-RewriteCond％{HTTPS}！= on
-RewriteRule ^ https：//％{HTTP_HOST}％{REQUEST_URI} [L、R = 301]
 
   # Pass requests that don't refer directly to files in the filesystem to index.php
   RewriteCond %{REQUEST_FILENAME} !-f
