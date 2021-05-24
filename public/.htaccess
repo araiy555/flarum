@@ -1,3 +1,22 @@
+Allow access if Flarum is installed in a subdirectory,
+# but another .htaccess in a higher directory denies access.
+
+
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_authz_core.c>
+  Require all granted
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order Allow,Deny
+  Allow from all
+</IfModule>
+
+# Fix for https://httpoxy.org vulnerability
+Header unset Proxy
+
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
@@ -6,26 +25,34 @@
 
   # Uncomment the following lines if you are not using a `public` directory
   # to prevent sensitive resources from being exposed.
-  # RewriteRule /\.git / [F,L]
-  # RewriteRule ^auth\.json$ / [F,L]
-  # RewriteRule ^composer\.(lock|json)$ / [F,L]
+   RewriteRule /\.git / [F,L]
+   RewriteRule ^auth\.json$ / [F,L]
+   RewriteRule ^composer\.(lock|json)$ / [F,L]
   RewriteRule ^config.php$ / [F,L]
-  # RewriteRule ^flarum$ / [F,L]
-  # RewriteRule ^storage/(.*)?$ / [F,L]
-  # RewriteRule ^vendor/(.*)?$ / [F,L]
+   RewriteRule ^flarum$ / [F,L]
+   RewriteRule ^storage/(.*)?$ / [F,L]
+   RewriteRule ^vendor/(.*)?$ / [F,L]
 
-  # Pass requests that don't refer directly to files in the filesystem to index.php
+   RewriteRule ^api(.*)$ api.php [QSA,L]
+
+   RewriteRule ^admin(.*)$ admin.php [QSA,L]
+
   RewriteCond %{REQUEST_FILENAME} !-f
+
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.php [QSA,L]
+
+  RewriteRule !^assets index.php [QSA,L]
+
+
+  # MultiViews can mess up our rewriting scheme
+  Options -MultiViews
+
+
+  # Autoindex will list all assets files which is not so good
+  Options -Indexes
+
 
 </IfModule>
-
-# Disable directory listings
-Options -Indexes
-
-# MultiViews can mess up our rewriting scheme
-Options -MultiViews
 
 # The following directives are based on best practices from H5BP Apache Server Configs
 # https://github.com/h5bp/server-configs-apache
@@ -128,6 +155,9 @@ Options -MultiViews
 
 # Fix for https://httpoxy.org vulnerability
 <IfModule mod_headers.c>
-Header set Access-Control-Allow-Origin "*"
+  RequestHeader unset Proxy
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
 </IfModule>
 
