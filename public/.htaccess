@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
   RewriteEngine on
-
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
   # Ensure the Authorization HTTP header is available to PHP
   RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
