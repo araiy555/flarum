@@ -1,35 +1,33 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine on
-  RewriteRule ^(.*)$ https://stocktown.jp/$1 [L,R=301,NC]
-  RewriteCond %{HTTPS} off [OR]
-  RewriteCond %{HTTP_HOST} ^www\. [NC]
-  RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
-  # Ensure the Authorization HTTP header is available to PHP
-  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
-  # Uncomment the following lines if you are not using a `public` directory
-  # to prevent sensitive resources from being exposed.
-  # RewriteRule /\.git / [F,L]
-  # RewriteRule ^auth\.json$ / [F,L]
-  # RewriteRule ^composer\.(lock|json)$ / [F,L]
-  # RewriteRule ^config.php$ / [F,L]
-  # RewriteRule ^flarum$ / [F,L]
-  # RewriteRule ^storage/(.*)?$ / [F,L]
-  # RewriteRule ^vendor/(.*)?$ / [F,L]
-
-  # Pass requests that don't refer directly to files in the filesystem to index.php
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.php [QSA,L]
+<IfModule mod_authz_core.c>
+  Require all granted
+</IfModule>
+<IfModule !mod_authz_core.c>
+  Order Allow,Deny
+  Allow from all
 </IfModule>
 
+<IfModule mod_rewrite.c>
+  RewriteEngine on
 
-# Disable directory listings
-Options -Indexes
+  RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
-# MultiViews can mess up our rewriting scheme
-Options -MultiViews
+  RewriteRule ^vendor/(.*)?$ / [F,L]
+  RewriteRule ^storage/(.*)?$ / [F,L]
+  RewriteRule ^config.php$ / [F,L]
 
+  RewriteRule ^api(.*)$ api.php [QSA,L]
+  RewriteRule ^admin(.*)$ admin.php [QSA,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule !^assets index.php [QSA,L]
+
+  # MultiViews can mess up our rewriting scheme
+  Options -MultiViews
+
+  # Autoindex will list all assets files which is not so good
+  Options -Indexes
+</IfModule>
 # The following directives are based on best practices from H5BP Apache Server Configs
 # https://github.com/h5bp/server-configs-apache
 
@@ -129,7 +127,12 @@ Options -MultiViews
     </IfModule>
 </IfModule>
 
-# Fix for https://httpoxy.org vulnerability
-<IfModule mod_headers.c>
-  RequestHeader unset Proxy
-</IfModule>
+RewriteEngine on
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^stocktown\.jp [NC]
+RewriteRule ^(.*)$ https://stocktown.jp/$1 [L,R=301]
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\stocktown\.jp [NC]
+RewriteRule ^(.*)$ https://stocktown.jp/$1 [L,R=301]```
