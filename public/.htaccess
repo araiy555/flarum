@@ -19,11 +19,6 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.php [QSA,L]
 
-# HTTPS Redirect
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP:X-Forwarded-SSL} !on
-RewriteCond %{HTTP_HOST} ^stocktown\.jp$
-RewriteRule ^/?$ "https\:\/\/stocktown\.jp\/" [R=301,L]
 </IfModule>
 
 # Disable directory listings
@@ -134,5 +129,8 @@ Options -MultiViews
 # Fix for https://httpoxy.org vulnerability
 <IfModule mod_headers.c>
   RequestHeader unset Proxy
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
 </IfModule>
 
