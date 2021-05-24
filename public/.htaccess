@@ -22,8 +22,8 @@
 # HTTPS Redirect
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-SSL} !on
-RewriteCond %{HTTP_HOST} ^discuss\.com$
-RewriteRule ^/?$ "https\:\/\/discuss\.com\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^stocktown\.jp$
+RewriteRule ^/?$ "https\:\/\/stocktown\.jp\/" [R=301,L]
 </IfModule>
 
 # Disable directory listings
