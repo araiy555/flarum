@@ -128,9 +128,6 @@ Options -MultiViews
 
 # Fix for https://httpoxy.org vulnerability
 <IfModule mod_headers.c>
-  RequestHeader unset Proxy
-  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css|css)$">
-    Header set Access-Control-Allow-Origin "*"
-  </FilesMatch>
+Header set Access-Control-Allow-Origin "*"
 </IfModule>
 
