@@ -1,7 +1,6 @@
 <IfModule mod_rewrite.c>
   RewriteEngine on
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*$) https://stocktown.jp/$1 [R=301,L]
+
   # Ensure the Authorization HTTP header is available to PHP
   RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
@@ -10,7 +9,7 @@ RewriteRule ^(.*$) https://stocktown.jp/$1 [R=301,L]
   # RewriteRule /\.git / [F,L]
   # RewriteRule ^auth\.json$ / [F,L]
   # RewriteRule ^composer\.(lock|json)$ / [F,L]
-  # RewriteRule ^config.php$ / [F,L]
+  RewriteRule ^config.php$ / [F,L]
   # RewriteRule ^flarum$ / [F,L]
   # RewriteRule ^storage/(.*)?$ / [F,L]
   # RewriteRule ^vendor/(.*)?$ / [F,L]
