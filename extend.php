@@ -8,7 +8,13 @@
  */
 
 use Flarum\Extend;
+use Flarum\Frontend\Document;
 
 return [
-    // Register extenders here to customize your forum!
+    (new Extend\Frontend('forum'))
+        ->content(function (Document $document) {
+            $document->head[] = '
+<meta name="google-site-verification" content="k5wKwgbijqTSvyCmvRt_VhtBaGcF9DYuhZcAz5F1-DI" />
+            ';
+        })
 ];
