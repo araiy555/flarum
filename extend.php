@@ -22,6 +22,7 @@ return [
   gtag(\'js\', new Date());
   gtag(\'config\', \'G-0MBHKP37RC\');
 </script>
-            ';
+<script data-ad-client="ca-pub-3518678681279293" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>           
+';
         })
 ];
