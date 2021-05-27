@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c91e92c5565ada7b2dc4559513c5bf6",
+    "content-hash": "6b21fe286ec761528a247952f9ef1a1e",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -382,16 +382,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "1.11.1",
+            "version": "1.11.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "163074496dc7c3c7b8ccbf3d4376c0187424ed81"
+                "reference": "3bb5588cec00a0268829cc4a518490df6741af9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/163074496dc7c3c7b8ccbf3d4376c0187424ed81",
-                "reference": "163074496dc7c3c7b8ccbf3d4376c0187424ed81",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/3bb5588cec00a0268829cc4a518490df6741af9d",
+                "reference": "3bb5588cec00a0268829cc4a518490df6741af9d",
                 "shasum": ""
             },
             "require": {
@@ -473,7 +473,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-18T16:45:32+00:00"
+            "time": "2021-05-25T09:01:55+00:00"
         },
         {
             "name": "doctrine/dbal",
@@ -2415,6 +2415,112 @@
             "time": "2021-03-22T04:29:07+00:00"
         },
         {
+            "name": "fof/drafts",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/drafts.git",
+                "reference": "ce6092e01046ce267dc6ccd807e32e9d93831676"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/drafts/zipball/ce6092e01046ce267dc6ccd807e32e9d93831676",
+                "reference": "ce6092e01046ce267dc6ccd807e32e9d93831676",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.16",
+                "fof/console": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Drafts",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-edit",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20957"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Drafts\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Charlie K",
+                    "email": "charlie.k@redevs.org",
+                    "homepage": "https://redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Allow users to create post and discussion drafts",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "Friends of Flarum",
+                "flarum"
+            ],
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2021-03-18T15:23:29+00:00"
+        },
+        {
+            "name": "fof/extend",
+            "version": "0.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/extend.git",
+                "reference": "9fc079d3b1c4c98c87fb252b4df12d5b2033458e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/extend/zipball/9fc079d3b1c4c98c87fb252b4df12d5b2033458e",
+                "reference": "9fc079d3b1c4c98c87fb252b4df12d5b2033458e",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.12"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Extend\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org"
+                }
+            ],
+            "description": "Configurable PHP components for your Flarum extension",
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-10-08T22:58:45+00:00"
+        },
+        {
             "name": "fof/formatting",
             "version": "0.4.0",
             "source": {
@@ -2539,6 +2645,154 @@
                 }
             ],
             "time": "2021-03-21T19:22:50+00:00"
+        },
+        {
+            "name": "fof/gamification",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/gamification.git",
+                "reference": "5f35ab591645906945bee0cee97ea58736c029b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/gamification/zipball/5f35ab591645906945bee0cee97ea58736c029b1",
+                "reference": "5f35ab591645906945bee0cee97ea58736c029b1",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.16",
+                "fof/extend": ">=0.3.1"
+            },
+            "replace": {
+                "reflar/gamification": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Gamification",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-thumbs-up",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20671-friendsofflarum-gamification"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Gamification\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Lopez",
+                    "email": "Christian.Lopez@redevs.org",
+                    "homepage": "https://redevs.org"
+                },
+                {
+                    "name": "Charlie K",
+                    "email": "Charlie.K@redevs.org",
+                    "homepage": "https://redevs.org"
+                },
+                {
+                    "name": "David Sevilla Martin",
+                    "email": "me+fof@datitisev.me",
+                    "homepage": "https://datitisev.me"
+                }
+            ],
+            "description": "Upvotes and downvotes for your Flarum community",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "Gamification",
+                "Settings",
+                "flarum",
+                "friendsofflarum",
+                "misc",
+                "points"
+            ],
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2021-04-21T11:39:19+00:00"
+        },
+        {
+            "name": "fof/linguist",
+            "version": "0.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/linguist.git",
+                "reference": "7cd1bde62ee0b7fdade933a348f10c4a531878f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/linguist/zipball/7cd1bde62ee0b7fdade933a348f10c4a531878f3",
+                "reference": "7cd1bde62ee0b7fdade933a348f10c4a531878f3",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": ">=0.1.0-beta.16 <0.1.0-beta.17",
+                "symfony/yaml": "^5.0"
+            },
+            "replace": {
+                "flagrow/linguist": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Linguist",
+                    "category": "language",
+                    "icon": {
+                        "name": "fas fa-italic",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/7026"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Linguist\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                }
+            ],
+            "description": "Customize translations",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "extension",
+                "flarum",
+                "locale",
+                "translation"
+            ],
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2021-03-21T17:21:48+00:00"
         },
         {
             "name": "fof/links",
@@ -3369,7 +3623,7 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
@@ -3418,7 +3672,7 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
@@ -3471,7 +3725,7 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
@@ -3521,7 +3775,7 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -3565,7 +3819,7 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -3621,7 +3875,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -3668,16 +3922,16 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "68036b4fb17ad40a599323bda3f2c0845c8100d8"
+                "reference": "b9a7cf6acf1d05d863b6ef67c00cdb0e4ccea097"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/68036b4fb17ad40a599323bda3f2c0845c8100d8",
-                "reference": "68036b4fb17ad40a599323bda3f2c0845c8100d8",
+                "url": "https://api.github.com/repos/illuminate/contracts/zipball/b9a7cf6acf1d05d863b6ef67c00cdb0e4ccea097",
+                "reference": "b9a7cf6acf1d05d863b6ef67c00cdb0e4ccea097",
                 "shasum": ""
             },
             "require": {
@@ -3708,20 +3962,20 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2021-05-18T12:49:19+00:00"
+            "time": "2021-05-21T19:16:29+00:00"
         },
         {
             "name": "illuminate/database",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "d5bea2ae823dc66f08ea56e09b1bbf7d8b5086c9"
+                "reference": "1de37c79ffb948f9ad819b56d080dab9cc375da3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/d5bea2ae823dc66f08ea56e09b1bbf7d8b5086c9",
-                "reference": "d5bea2ae823dc66f08ea56e09b1bbf7d8b5086c9",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/1de37c79ffb948f9ad819b56d080dab9cc375da3",
+                "reference": "1de37c79ffb948f9ad819b56d080dab9cc375da3",
                 "shasum": ""
             },
             "require": {
@@ -3772,11 +4026,11 @@
                 "orm",
                 "sql"
             ],
-            "time": "2021-05-19T13:01:47+00:00"
+            "time": "2021-05-25T12:40:22+00:00"
         },
         {
             "name": "illuminate/events",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -3827,7 +4081,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -3885,7 +4139,7 @@
         },
         {
             "name": "illuminate/hashing",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/hashing.git",
@@ -3929,7 +4183,7 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -3971,7 +4225,7 @@
         },
         {
             "name": "illuminate/mail",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/mail.git",
@@ -4028,7 +4282,7 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -4072,16 +4326,16 @@
         },
         {
             "name": "illuminate/queue",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/queue.git",
-                "reference": "c490f2b0c5136e0e9aac197a74a8037a341f3b26"
+                "reference": "7c8ae5f16ba03615671c789fcce21c111cb47b75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/queue/zipball/c490f2b0c5136e0e9aac197a74a8037a341f3b26",
-                "reference": "c490f2b0c5136e0e9aac197a74a8037a341f3b26",
+                "url": "https://api.github.com/repos/illuminate/queue/zipball/7c8ae5f16ba03615671c789fcce21c111cb47b75",
+                "reference": "7c8ae5f16ba03615671c789fcce21c111cb47b75",
                 "shasum": ""
             },
             "require": {
@@ -4129,11 +4383,11 @@
             ],
             "description": "The Illuminate Queue package.",
             "homepage": "https://laravel.com",
-            "time": "2021-05-18T12:49:19+00:00"
+            "time": "2021-05-21T17:46:16+00:00"
         },
         {
             "name": "illuminate/session",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/session.git",
@@ -4185,16 +4439,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "ed5adf8494e6c047fcf6de8b56153640379bf08d"
+                "reference": "8a2db3cb7e76fdbd28c6172492a79ab540a9b8e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/ed5adf8494e6c047fcf6de8b56153640379bf08d",
-                "reference": "ed5adf8494e6c047fcf6de8b56153640379bf08d",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/8a2db3cb7e76fdbd28c6172492a79ab540a9b8e5",
+                "reference": "8a2db3cb7e76fdbd28c6172492a79ab540a9b8e5",
                 "shasum": ""
             },
             "require": {
@@ -4245,11 +4499,11 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2021-05-18T12:49:19+00:00"
+            "time": "2021-05-20T18:46:23+00:00"
         },
         {
             "name": "illuminate/translation",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
@@ -4297,16 +4551,16 @@
         },
         {
             "name": "illuminate/validation",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/validation.git",
-                "reference": "4d386dca490bb37f703d6e7973670fbf17eb7fe9"
+                "reference": "010662668641a402d9a379dd85b5131a31c991d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/validation/zipball/4d386dca490bb37f703d6e7973670fbf17eb7fe9",
-                "reference": "4d386dca490bb37f703d6e7973670fbf17eb7fe9",
+                "url": "https://api.github.com/repos/illuminate/validation/zipball/010662668641a402d9a379dd85b5131a31c991d3",
+                "reference": "010662668641a402d9a379dd85b5131a31c991d3",
                 "shasum": ""
             },
             "require": {
@@ -4348,11 +4602,11 @@
             ],
             "description": "The Illuminate Validation package.",
             "homepage": "https://laravel.com",
-            "time": "2021-05-19T12:56:22+00:00"
+            "time": "2021-05-21T18:51:37+00:00"
         },
         {
             "name": "illuminate/view",
-            "version": "v8.42.1",
+            "version": "v8.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -4469,6 +4723,61 @@
                 "watermark"
             ],
             "time": "2019-11-02T09:15:47+00:00"
+        },
+        {
+            "name": "justoverclock/flarum-ext-welcomebox",
+            "version": "1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justoverclockl/flarum-ext-welcomebox.git",
+                "reference": "44fc3c62cad7200ad7f1d6a7e3a109f9e203c406"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justoverclockl/flarum-ext-welcomebox/zipball/44fc3c62cad7200ad7f1d6a7e3a109f9e203c406",
+                "reference": "44fc3c62cad7200ad7f1d6a7e3a109f9e203c406",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^0.1.0-beta.16"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Welcomebox",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-user-tie",
+                        "backgroundColor": "green",
+                        "color": "white"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/27023"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Justoverclock\\Welcomebox\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Colia",
+                    "email": "info@flarum.it",
+                    "homepage": "https://flarum.it",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add Welcome Box in sidenav with user avatar",
+            "keywords": [
+                "flarum"
+            ],
+            "time": "2021-05-15T13:59:22+00:00"
         },
         {
             "name": "laminas/laminas-diactoros",
@@ -5636,16 +5945,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.48.0",
+            "version": "2.48.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "d3c447f21072766cddec3522f9468a5849a76147"
+                "reference": "8d1f50f1436fb4b05e7127360483dd9c6e73da16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/d3c447f21072766cddec3522f9468a5849a76147",
-                "reference": "d3c447f21072766cddec3522f9468a5849a76147",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8d1f50f1436fb4b05e7127360483dd9c6e73da16",
+                "reference": "8d1f50f1436fb4b05e7127360483dd9c6e73da16",
                 "shasum": ""
             },
             "require": {
@@ -5721,7 +6030,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-05-07T10:08:30+00:00"
+            "time": "2021-05-26T22:08:38+00:00"
         },
         {
             "name": "nikic/fast-route",
