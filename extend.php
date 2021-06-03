@@ -25,7 +25,35 @@ return [
 </script>    
       
 <script data-ad-client="ca-pub-3518678681279293" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>           
-           
+         <style defer> 
+     @media screen and (min-width: 960px) {
+  h1.Header-title a {
+ 
+   height: 10rem;
+            text-indent: -1000000px;
+            overflow: hidden;
+            display: block;
+            width: 210px;
+            height:100%;
+            background: url(\'/title.png\') no-repeat;
+}
+}
+@media screen and (max-width: 480px) {
+    h1.Header-title a {
+    text-align: center;
+            text-indent: -1000000px;
+            overflow: hidden;
+            display: block;
+              width: 200px;
+            height:40px;
+            background: url(\'/title.png\') no-repeat;
+}
+}
+         
+         
+ 
+         
+         </style>  
 ';
         })
 ];
