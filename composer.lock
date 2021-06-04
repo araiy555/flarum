@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b21fe286ec761528a247952f9ef1a1e",
+    "content-hash": "a2db9c6cca890b55310ea9ae9b4fd2af",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -5406,6 +5406,56 @@
             ],
             "description": "Choose the favicon for your flarum forum!",
             "time": "2015-12-17T21:48:44+00:00"
+        },
+        {
+            "name": "matteocontrini/flarum-imgur-upload",
+            "version": "v3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/matteocontrini/flarum-imgur-upload.git",
+                "reference": "7447b079e690cbbda0e581537bcd61b340190724"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/matteocontrini/flarum-imgur-upload/zipball/7447b079e690cbbda0e581537bcd61b340190724",
+                "reference": "7447b079e690cbbda0e581537bcd61b340190724",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": ">=0.1.0-beta.16 <0.1.0-beta.17"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Imgur Upload",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-circle",
+                        "backgroundColor": "#272727",
+                        "color": "#85BF25"
+                    },
+                    "optional-dependencies": [
+                        "flarum/markdown"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ImgurUpload\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Matteo Contrini",
+                    "email": "matteo@contrini.it"
+                }
+            ],
+            "description": "Simple image upload from the Flarum editor",
+            "time": "2021-04-01T20:46:43+00:00"
         },
         {
             "name": "matthiasmullie/minify",

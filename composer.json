@@ -57,6 +57,7 @@
         "fof/user-directory": "^0.6.2",
         "justoverclock/flarum-ext-welcomebox": "^1.1",
         "matpompili/flarum-favicon": "^1.0@beta",
+        "matteocontrini/flarum-imgur-upload": "^3.8",
         "michaelbelgium/flarum-discussion-views": "^6.0",
         "nearata/flarum-ext-embed-video": "^2.1",
         "s9e/flarum-ext-mediaembed": "*",
