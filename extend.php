@@ -28,8 +28,7 @@ return [
          <style defer> 
      @media screen and (min-width: 960px) {
   h1.Header-title a {
- 
-   height: 10rem;
+ margin: -5px 15px 0 0;
             text-indent: -1000000px;
             overflow: hidden;
             display: block;
@@ -40,7 +39,6 @@ return [
 }
 @media screen and (max-width: 480px) {
     h1.Header-title a {
-    text-align: center;
             text-indent: -1000000px;
             overflow: hidden;
             display: block;
