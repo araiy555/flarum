@@ -22,36 +22,16 @@ return [
   function gtag(){dataLayer.push(arguments);}
   gtag(\'js\', new Date());
   gtag(\'config\', \'G-0MBHKP37RC\');
-</script>    
-      
+  
+</script>  
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script data-ad-client="ca-pub-3518678681279293" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>           
-         <style defer> 
-     @media screen and (min-width: 960px) {
-  h1.Header-title a {
- margin: -5px 15px 0 0;
-            text-indent: -1000000px;
-            overflow: hidden;
-            display: block;
-            width: 210px;
-            height:100%;
-            background: url(\'/title.png\') no-repeat;
-}
-}
-@media screen and (max-width: 480px) {
-    h1.Header-title a {
-            text-indent: -1000000px;
-            overflow: hidden;
-            display: block;
-              width: 200px;
-            height:40px;
-            background: url(\'/title.png\') no-repeat;
-}
-}
-         
-         
- 
-         
-         </style>  
+<script src="/js/main.js"></script>           
+<link rel="stylesheet" href="/css/main.css">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 ';
         })
 ];

@@ -1,0 +1,493 @@
+
+header.Hero.PageHero {
+  display: none;
+}
+
+@media screen and (min-width: 960px) {
+  h1.Header-title a {
+    margin: -5px 15px 0 0;
+    text-indent: -1000000px;
+    overflow: hidden;
+    display: block;
+    width: 210px;
+    height: 100%;
+    background: url('../title.png') no-repeat;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1.Header-title a {
+    text-indent: -1000000px;
+    overflow: hidden;
+    display: block;
+    width: 200px;
+    height: 40px;
+    background: url('../title.png') no-repeat;
+  }
+  .tradingview-widget-container{
+    display: none;
+  }
+}
+
+#search-text {
+  width: 80%; /*親要素いっぱい広げる*/
+  padding: 10px 15px; /*ボックスを大きくする*/
+  font-size: 16px;
+  border-radius: 3px; /*ボックス角の丸み*/
+  border: 2px solid #ddd; /*枠線*/
+  box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+  margin: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.col_4 {
+  width: 100%;
+  display: flex;
+  display: -ms-flexbox; /* IE10 */
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap; /* IE10 */
+}
+
+.col_4 > div {
+  width: 25%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .col_4 > div {
+    width: 33.33333%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .col_4 > div {
+    width: 50%;
+  }
+}
+
+/* 2カラムサイトにする */
+.wrapper {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Pages-container {
+  white-space: nowrap;
+}
+
+/* 2カラムコンテンツにする */
+
+.archive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+.archive img {
+  display: block;
+  margin-bottom: 3rem;
+  width: 100%;
+  /*height center;*/
+}
+
+.main {
+  width: 60%;
+  margin-r: auto;
+}
+
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th,table td{
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+}
+
+table td.icon{
+  background-size: 35px;
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+table td.icon.bird{
+  background-image: url(icon-bird.png)
+}
+
+table td.icon.whale{
+  background-image: url(icon-whale.png)
+}
+
+table td.icon.crab{
+  background-image: url(icon-crab.png)
+}
+
+
+
+
+
+footer{
+  background-color:#fff;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  color: var(--dark);
+}
+/* LINKS */
+.link {
+  padding: 10px;
+  color: #555;
+  font-size: 15px;
+  background-color:#fff;
+  position: relative;
+}
+
+.sub-links ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+
+  background-color:#fff;
+}
+
+.sub-links a {
+  color: #555;
+  text-decoration: none;
+}
+
+.sub-links a:hover {
+  color: #555;
+  text-decoration: underline;
+}
+
+.logos a {
+  padding: 10px;
+}
+.Post-body {
+  overflow-x: hidden;
+}
+
+#chart {
+  max-width: 650px;
+  margin: 35px auto;
+}
+
+
+
+.box {
+  display:flex;
+  flex-direction: column;
+  padding: 20px;
+  border-bottom: solid 3px #555;/*下線*/
+}
+
+.text {
+  width: 100%;
+  text-align: left;
+}
+
+h3 {
+  white-space: normal;
+  font-size: 17px;
+  margin: 0;
+}
+
+.pict {
+  text-align: center;
+  min-height: 0%;
+}
+
+.pict img {
+  height:auto;
+}
+
+.description {
+  white-space: normal;
+  width: 630px;
+}
+.time{
+  float: left;
+}
+
+.author{
+  margin-left: 5px;
+  float: left;
+}
+
+
+@media (min-width:768px) {
+  body {
+    padding: 0px;
+  }
+  .box {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0px;
+  }
+  /*.box:nth-child(even) {*/
+  /*  flex-direction: row-reverse;*/
+  /*}*/
+
+  .text {
+    text-align: left;
+  }
+  .box:nth-child(even) .text {
+    text-align: left;
+  }
+  .pict img {
+    height:auto;
+  }
+  .box:nth-child(even) .pict {
+    margin-left: 0;
+  }
+}
+
+
+
+#scroll-menu {
+  height: 40px;/*メニューの縦幅*/
+  background-color: #fff;/*メニューの背景色*/
+}
+#scroll-menu .scroll-menu-inner {
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+#scroll-menu li {
+  float: left;
+  height: 100%;
+}
+#scroll-menu a {
+  display: block;
+  height: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  color: #555;/*文字色*/
+  font-size: 70%;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 40px;/*メニューの縦幅*/
+}
+#scroll-menu a:hover {
+  background-color: #fff;/*マウスホバー時の背景色*/
+}
+@media screen and (max-width: 1000px) {/*メニューの横幅*/
+  #scroll-menu {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  #scroll-menu .scroll-menu-inner {
+    margin: 0;
+  }
+}
+
+
+
+
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 700px;
+  margin: 0 auto;}
+
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 40px 40px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#info:checked ~ #info_content,
+#design:checked ~ #design_content {
+  display: block;
+}
+
+
+/* ------------------------------
+price-box
+------------------------------ */
+.price-box {
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.price-box__header {
+  padding: 30px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.price-box__img {
+  text-align: center;
+}
+.price-box__title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price-box__exchange {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price-box__body {
+  padding: 40px 15px;
+}
+
+.price-box__price {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 25px;
+
+}
+
+
+
+h6 {
+  position: relative;
+  padding: 0 65px;
+  text-align: center;
+}
+
+h6:before {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background: #000;
+}
+
+h6 span {
+  position: relative;
+  padding: 0 1em;
+  background: #fff;
+}
+
+.price-box__description {
+  text-align: center;
+  white-space: normal;
+  width: 630px;
+
+}
+
+.cp_ipselect {
+  overflow: hidden;
+  width: 90%;
+  margin: 2em auto;
+  text-align: center;
+}
+.cp_ipselect select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+  display: none;
+}
+.cp_ipselect.cp_sl01 {
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+}
+.cp_ipselect.cp_sl01::before {
+  position: absolute;
+  top: 0.8em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666666;
+  pointer-events: none;
+}
+.cp_ipselect.cp_sl01 select {
+  padding: 8px 38px 8px 8px;
+  color: #666666;
+}
+
+.pic_frame {
+  display: inline-block;
+  text-align: center;
+}
+
+.average_box{
+  float: left;
+  margin: 20px;
+}
+
+.average_container{
+  overflow: hidden;
+}
+.tradingview-widget-copyright{
+  display:none;
+}
+.tradingview-widget-container{
+  height: 0;
+}
+
