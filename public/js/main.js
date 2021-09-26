@@ -368,7 +368,7 @@ if (url === '/p/6-cheap') {
     console.log(data);
     $.each(data, function (index, value) {
       $('#osusume').append('' +
-        '    <tr><td> <a href="/p/2-search?value=' + value.symbol + '">' + value.stock_name + '</a></td>\n' +
+        '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '">' + value.stock_name + '</a></td>\n' +
         '      <td>' + value.acronym + '</td>\n' +
         '      <td>' + value.eps + '</a></td>\n' +
         '      <td>' + value.per + '</td>\n' +
