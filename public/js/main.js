@@ -134,7 +134,7 @@ if (url === '/p/7-market-average') {
 }
 
 
-if (url === '/p/2-search') {
+if (url === '/p/9-search') {
 
 
   $.ajax({
@@ -407,7 +407,7 @@ function hoge(code) {
   if (13 === code) {
     const textbox = document.getElementById("search-text");
     const value = textbox.value;
-    window.location.href = '/p/2-search?value=' + value; // 通常の遷移
+    window.location.href = '/p/9-search?value=' + value; // 通常の遷移
   }
 }
 
