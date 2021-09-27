@@ -55,6 +55,7 @@
         "fof/sitemap": "^0.7.0",
         "fof/upload": "^0.14.0",
         "fof/user-directory": "^0.6.2",
+        "guzzlehttp/guzzle": "^6.0",
         "justoverclock/flarum-ext-welcomebox": "^1.1",
         "matpompili/flarum-favicon": "^1.0@beta",
         "matteocontrini/flarum-imgur-upload": "^3.8",
