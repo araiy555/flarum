@@ -110,6 +110,11 @@ table{
   border-spacing: 0;
   width: 100%;
 }
+.scroll-table {
+  overflow: auto;
+  white-space: nowrap;
+}
+
 
 table tr{
   border-bottom: solid 1px #eee;
