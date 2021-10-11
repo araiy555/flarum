@@ -150,7 +150,7 @@ if (url === '/p/9-search') {
       $('#bord').click(function () {
         document.location = '/all?q=' + data[0].symbol;
       });
-      $('.price-box__exchange').text(data[0][7]);
+      $('.price-box__exchange').text(data[0][6]);
       $('.price-box__title').text(data[0].stock_name + '(' + data[0].symbol + ')');
 
       let closing_price = parseInt(data[0].closing_price.replace(/\[/, ' ').replace(/\]/, ' '), 10);
@@ -159,7 +159,7 @@ if (url === '/p/9-search') {
       let low_price = parseInt(data[0].low_price.replace(/\[/, ' ').replace(/\]/, ' '), 10);
       let volume = parseInt(data[0].volume.replace(/\[/, ' ').replace(/\]/, ' '), 10);
 
-
+      $('#update_day').text('前日比 (' + data[0][17] + ')');
       $('#closing_price').text(closing_price);
       $('#open_price').text(open_price);
       $('#high_price').text(high_price);
@@ -369,7 +369,6 @@ if (url === '/p/6-cheap') {
     $.each(data, function (index, value) {
       $('#osusume').append('' +
         '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '">' + value.stock_name + '</a></td>\n' +
-        '      <td>' + value.acronym + '</td>\n' +
         '      <td>' + value.eps + '</a></td>\n' +
         '      <td>' + value.per + '</td>\n' +
         '      <td>' + value.roe + '</td>\n' +
