@@ -151,7 +151,14 @@ if (url === '/p/9-search') {
         document.location = '/all?q=' + data[0].symbol;
       });
       $('.price-box__exchange').text(data[0][6]);
-      $('.price-box__title').text(data[0].stock_name + '(' + data[0].symbol + ')');
+      if (data[0].overview == null) {
+        stock_name = data[0].stock_name;
+      } else {
+        stock_name = data[0].overview;
+      }
+
+      $('.price-box__title').text(stock_name + '(' + data[0].symbol + ')');
+      $('.price-box__description').text(data[0].company);
 
       let closing_price = parseInt(data[0].closing_price.replace(/\[/, ' ').replace(/\]/, ' '), 10);
       let open_price = parseInt(data[0].open_price.replace(/\[/, ' ').replace(/\]/, ' '), 10);
@@ -365,10 +372,15 @@ if (url === '/p/6-cheap') {
     dataType: 'json',
     data: {market: getParam('market')}
   }).done(function (data) {
-    console.log(data);
     $.each(data, function (index, value) {
+      if (value.overview == null) {
+        stock_name = value.stock_name;
+      } else {
+        stock_name = value.overview;
+      }
+
       $('#osusume').append('' +
-        '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '">' + value.stock_name + '</a></td>\n' +
+        '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '">' + stock_name + '</a></td>\n' +
         '      <td>' + value.eps + '</a></td>\n' +
         '      <td>' + value.per + '</td>\n' +
         '      <td>' + value.roe + '</td>\n' +
