@@ -8,7 +8,6 @@ core
 studio.json
 install.txt
 stock/
-config.php
 public/
 public/assets
 stocktown.bat
