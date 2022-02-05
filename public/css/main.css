@@ -5,24 +5,13 @@ header.Hero.PageHero {
 
 @media screen and (min-width: 960px) {
   h1.Header-title a {
-    margin: -5px 15px 0 0;
-    text-indent: -1000000px;
-    overflow: hidden;
-    display: block;
-    width: 210px;
-    height: 100%;
-    background: url('../title.png') no-repeat;
+    background: url('../stocktown.png') no-repeat;
   }
 }
 
 @media screen and (max-width: 480px) {
   h1.Header-title a {
-    text-indent: -1000000px;
-    overflow: hidden;
-    display: block;
-    width: 200px;
-    height: 40px;
-    background: url('../title.png') no-repeat;
+    background: url('../stocktown.png') no-repeat;
   }
   .tradingview-widget-container{
     display: none;
