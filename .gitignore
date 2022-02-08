@@ -8,7 +8,6 @@ core
 studio.json
 install.txt
 stock/
-public/
 public/assets
 stocktown.bat
 stocktown.log
