@@ -14,7 +14,7 @@ return [
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
             $document->head[] = '
-<link rel="shortcut icon" href="20e1d7d8e2c02f950d6e69db40054539_xxo.ico">
+<link rel="shortcut icon" href="favicon.ico">
 <meta name="google-site-verification" content="k5wKwgbijqTSvyCmvRt_VhtBaGcF9DYuhZcAz5F1-DI" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MBHKP37RC"></script>
 <script>
