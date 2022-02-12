@@ -1,4 +1,8 @@
+
 let url = location.pathname;
+let fa = document.getElementById("fav");
+fa.href="/stocktown.ico";
+
 if (url === '/p/7-market-average') {
 
   $.ajax({
@@ -380,10 +384,10 @@ if (url === '/p/6-cheap') {
       }
 
       $('#osusume').append('' +
-        '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '">' + stock_name + '</a></td>\n' +
-        '      <td>' + value.eps + '</a></td>\n' +
-        '      <td>' + value.per + '</td>\n' +
-        '      <td>' + value.roe + '</td>\n' +
+        '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '"><i class="fa fa-connectdevelop"></i>' + stock_name + '</a></td>\n' +
+        '      <td>EPS ' + value.eps + '</a></td>\n' +
+        '      <td>PER ' + value.per + '</td>\n' +
+        '      <td>ROE ' + value.roe + '</td>\n' +
         '      </tr>');
     });
 
@@ -401,13 +405,16 @@ if (url === '/p/5-ipo') {
     $.each(data, function (index, value) {
 
       $('#ipo').append('' +
-        '    <tr><td class="icon bird">' + value.sector_name + '</td>\n' +
-        '      <td>' + value.market_name + '</td>\n' +
-        '      <td><a href="' + value.url + '">' + value.name + '</a></td>\n' +
-        '      <td>' + value.date + '</td>\n' +
-        '      <td>' + value.p_kari + '</td>\n' +
+        '    <tr>' +
+        '<td class="icon bird">' +
+        '<a href="' + value.url + '"><i class="fa fa-connectdevelop"></i>' + value.name + '</a></td>\n' +
+        '<td><i class="fa fa-scribd"></i>' + value.sector_name + '</td>\n' +
+        '      <td><i class=" fa fa-fort-awesome"></i>' + value.market_name + '</td>\n' +
+        '      <td><i class="fa fa-calendar"></i> ' + value.date + '</td>\n' +
+        '      <td><i class="fa fa-btc"></i> ' + value.p_kari + '</td>\n' +
         '      </tr>');
     });
+
 
   }).fail(function (data) {
     alert('通信失敗！');

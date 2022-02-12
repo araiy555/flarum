@@ -106,6 +106,7 @@ header.Hero.PageHero {
 
 
 table{
+  list-style: none;
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
@@ -126,16 +127,15 @@ table tr:hover{
 }
 
 table th,table td{
-  text-align: center;
+  text-align: left;
   width: 25%;
-  padding: 15px 0;
+  padding: 5px 0;
 }
 
 table td.icon{
   background-size: 35px;
   background-position: left 5px center;
   background-repeat: no-repeat;
-  padding-left: 30px;
 }
 
 table td.icon.bird{
@@ -151,6 +151,24 @@ table td.icon.crab{
 }
 
 
+.demo03 th, .demo03 td	{  text-align: left; }
+@media only screen and (max-width: 480px) {
+  .demo03	{ margin: 0 -10px; }
+  .demo03 tr {
+    display:block;
+    margin-bottom: 10px;
+  }
+  .demo03 th {
+    display:block;
+    width: 100%;
+  }
+  .demo03 td {
+    display: list-item;
+    width: 90%;
+    margin-left: 10%;
+    border:none;
+  }
+}
 
 
 

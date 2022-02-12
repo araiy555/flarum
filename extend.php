@@ -14,7 +14,6 @@ return [
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
             $document->head[] = '
-<link rel="shortcut icon" href="stocktown.ico">
 <meta name="google-site-verification" content="k5wKwgbijqTSvyCmvRt_VhtBaGcF9DYuhZcAz5F1-DI" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MBHKP37RC"></script>
 <script>
@@ -25,6 +24,8 @@ return [
   
 </script>  
 
+<link id="fav" rel="shortcut icon" href="stocktown.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
