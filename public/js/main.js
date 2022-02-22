@@ -387,6 +387,7 @@ if (url === '/p/6-cheap') {
         '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '"><i class="fa fa-connectdevelop"></i>' + stock_name + '</a></td>\n' +
         '      <td>EPS ' + value.eps + '</a></td>\n' +
         '      <td>PER ' + value.per + '</td>\n' +
+        '      <td>PBR ' + value.pbr + '</td>\n' +
         '      <td>ROE ' + value.roe + '</td>\n' +
         '      </tr>');
     });
