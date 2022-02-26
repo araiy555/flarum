@@ -396,6 +396,7 @@ price-box
   text-align: center;
   font-size: 20px;
   font-weight: bold;
+  white-space: normal
 }
 
 .price-box__exchange {
@@ -568,6 +569,7 @@ h6 span {
   padding: 5px;
   background: #eaeaea;
   opacity: 1;
+  white-space: normal;
 }
 
 .ac-box div p{
@@ -579,6 +581,7 @@ h6 span {
 }
 .ac-small p{
   margin-bottom: 0px;
+
 }
 
 #search-button {
