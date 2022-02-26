@@ -3,6 +3,7 @@ let url = location.pathname;
 let fa = document.getElementById("fav");
 fa.href="/stocktown.ico";
 
+
 if (url === '/p/7-market-average') {
 
   $.ajax({
@@ -128,10 +129,6 @@ if (url === '/p/7-market-average') {
       '  </script>\n' +
       '</div>\n' +
       '<!-- TradingView Widget END -->');
-
-    console.log(data);
-
-    console.log('freaf');
   }).fail(function (data) {
     alert('通信失敗！');
   });
@@ -149,8 +146,6 @@ if (url === '/p/9-search') {
     cache: false,
     data: {search: getParam('value')}
   }).done(function (data) {
-      console.log(data);
-
       $('#bord').click(function () {
         document.location = '/all?q=' + data[0].symbol;
       });
@@ -328,7 +323,6 @@ if (url === '/p/4-news') {
     type: 'GET',
     dataType: 'json'
   }).done(function (data) {
-    console.log(data);
     // <div class="box">
     //     <div class="text">
     //     <h3>見出しが入ります</h3>
@@ -368,33 +362,76 @@ if (url === '/p/4-news') {
   });
 }
 
-if (url === '/p/6-cheap') {
 
+
+
+if (url === '/p/6-cheap') {
   $.ajax({
     url: 'https://stocktown.versus.jp/api/cheap.php',
     type: 'GET',
     dataType: 'json',
-    data: {market: getParam('market')}
+    data: {
+      market: getParam('market')
+    }
   }).done(function (data) {
+
+    $('#search-button').click(function () {
+      var area_val = $('[name=color]:checked').val();
+      var data = { market :  getParam('market'), area_val : area_val};
+      $.ajax({
+        url: 'https://stocktown.versus.jp/api/search.php',
+        type: 'GET',
+        dataType: 'json',
+        data: data
+      }).done(function (data) {
+        console.log(data);
+        $('#osusume tr').remove();
+        $.each(data, function (index, value) {
+          if (value.overview == null) {
+            stock_name = value.stock_name;
+          } else {
+            stock_name = value.overview;
+          }
+          $('#osusume').append('' +
+            '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '"><i class="fa fa-connectdevelop"></i>' + stock_name + '</a></td>\n' +
+            '      <td>EPS ' + value.eps + '</a></td>\n' +
+            '      <td>PER ' + value.per + '倍</td>\n' +
+            '      <td>PBR ' + value.pbr + '</td>\n' +
+            '      <td>ROE ' + value.roe + '％</td>\n' +
+            '      </tr>');
+        });
+      }).fail(function (data) {
+        alert('通信失敗！');
+      });
+    });
+
+
     $.each(data, function (index, value) {
       if (value.overview == null) {
         stock_name = value.stock_name;
       } else {
         stock_name = value.overview;
       }
-
       $('#osusume').append('' +
         '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '"><i class="fa fa-connectdevelop"></i>' + stock_name + '</a></td>\n' +
         '      <td>EPS ' + value.eps + '</a></td>\n' +
-        '      <td>PER ' + value.per + '</td>\n' +
+        '      <td>PER ' + value.per + '倍</td>\n' +
         '      <td>PBR ' + value.pbr + '</td>\n' +
-        '      <td>ROE ' + value.roe + '</td>\n' +
+        '      <td>ROE ' + value.roe + '％</td>\n' +
         '      </tr>');
     });
-
+    $('.colorGroup').on('click', function() {
+      if ($(this).prop('checked')){
+        // 一旦全てをクリアして再チェックする
+        $('.colorGroup').prop('checked', false);
+        $(this).prop('checked', true);
+      }
+    });
   }).fail(function (data) {
     alert('通信失敗！');
   });
+
+
 }
 
 if (url === '/p/5-ipo') {
