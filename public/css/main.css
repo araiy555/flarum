@@ -586,4 +586,6 @@ h6 span {
   cursor: pointer;
   text-align: center;
   border: 1px solid #232323;
+  background: #555555;
+  color: #fff;
 }
