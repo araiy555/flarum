@@ -157,16 +157,20 @@ table td.icon.crab{
   .demo03 tr {
     display:block;
     margin-bottom: 10px;
+    white-space: normal;
   }
   .demo03 th {
     display:block;
     width: 100%;
+
+    white-space: normal;
   }
   .demo03 td {
     display: list-item;
     width: 90%;
     margin-left: 10%;
     border:none;
+    white-space: normal;
   }
 }
 
@@ -336,8 +340,35 @@ h3 {
   }
 }
 
+.box26 {
+  position: relative;
+  margin: 2em 0;
+  padding: 0.5em 1em;
+  border: solid 3px #555555;
+  border-radius: 8px;
 
+  white-space: normal;
+}
+.box26 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #FFF;
+  color: #555555;
+  font-weight: bold;
 
+  white-space: normal;
+}
+.box26 p {
+
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+}
 
 
 /*タブ切り替え全体のスタイル*/
