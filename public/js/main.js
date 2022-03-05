@@ -1,8 +1,29 @@
-
 let url = location.pathname;
 let fa = document.getElementById("fav");
-fa.href="/stocktown.ico";
+fa.href = "/stocktown.ico";
 
+
+if (url === '/') {
+
+
+  $(document).on('input', '#search-text', function (e) {
+    $.ajax({
+      url: 'https://stocktown.versus.jp/api/autocomplete.php',
+      type: 'GET',
+      dataType: 'json',
+      cache: false,
+      data: {q: $('#search-text').val()}
+    }).done(function (data) {
+      $.each(data, function (index, value) {
+        $('#mylist').append(' <option value="' + value.overview + '" label="' + value.overview + '"></option>');
+      });
+
+    }).fail(function (data) {
+      alert('通信失敗！');
+    });
+  });
+}
+;
 
 if (url === '/p/7-market-average') {
 
@@ -146,6 +167,10 @@ if (url === '/p/9-search') {
     cache: false,
     data: {search: getParam('value')}
   }).done(function (data) {
+
+      if (!data.length) {
+         alert('一致する情報は見つかりませんでした。');
+      }
       $('#bord').click(function () {
         document.location = '/all?q=' + data[0].symbol;
       });
@@ -363,8 +388,6 @@ if (url === '/p/4-news') {
 }
 
 
-
-
 if (url === '/p/6-cheap') {
   $.ajax({
     url: 'https://stocktown.versus.jp/api/cheap.php',
@@ -377,14 +400,13 @@ if (url === '/p/6-cheap') {
 
     $('#search-button').click(function () {
       var area_val = $('[name=color]:checked').val();
-      var data = { market :  getParam('market'), area_val : area_val};
+      var data = {market: getParam('market'), area_val: area_val};
       $.ajax({
         url: 'https://stocktown.versus.jp/api/search.php',
         type: 'GET',
         dataType: 'json',
         data: data
       }).done(function (data) {
-        console.log(data);
         $('#osusume tr').remove();
         $.each(data, function (index, value) {
           if (value.overview == null) {
@@ -420,8 +442,8 @@ if (url === '/p/6-cheap') {
         '      <td>ROE ' + value.roe + '％</td>\n' +
         '      </tr>');
     });
-    $('.colorGroup').on('click', function() {
-      if ($(this).prop('checked')){
+    $('.colorGroup').on('click', function () {
+      if ($(this).prop('checked')) {
         // 一旦全てをクリアして再チェックする
         $('.colorGroup').prop('checked', false);
         $(this).prop('checked', true);
@@ -462,8 +484,11 @@ if (url === '/p/5-ipo') {
 function hoge(code) {
   if (13 === code) {
     const textbox = document.getElementById("search-text");
-    const value = textbox.value;
-    window.location.href = '/p/9-search?value=' + value; // 通常の遷移
+    const value = textbox.value.trim();
+
+    if (value !== '') {
+      window.location.href = '/p/9-search?value=' + value; // 通常の遷移
+    }
   }
 }
 
