@@ -435,11 +435,11 @@ if (url === '/p/6-cheap') {
         stock_name = value.overview;
       }
       $('#osusume').append('' +
-        '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '"><i class="fa fa-connectdevelop"></i>' + stock_name + '</a></td>\n' +
-        '      <td>EPS ' + value.eps + '</a></td>\n' +
-        '      <td>PER ' + value.per + '倍</td>\n' +
-        '      <td>PBR ' + value.pbr + '</td>\n' +
-        '      <td>ROE ' + value.roe + '％</td>\n' +
+        '    <tr><td><div><a href="/p/9-search?value=' + value.symbol + '"><i class="fa fa-connectdevelop"></i>' + stock_name+ '</a></div></td>\n' +
+        '      <td><div style="text-align: center">EPS ' + value.eps + '</div></td>\n' +
+        '      <td><div style="text-align: center">PER ' + value.per + '倍</div></td>\n' +
+        '      <td><div style="text-align: center">PBR ' + value.pbr + '</div></td>\n' +
+        '      <td><div style="text-align: center">ROE ' + value.roe + '％</div></td>\n' +
         '      </tr>');
     });
     $('.colorGroup').on('click', function () {
@@ -466,12 +466,12 @@ if (url === '/p/5-ipo') {
 
       $('#ipo').append('' +
         '    <tr>' +
-        '<td class="icon bird">' +
-        '<a href="' + value.url + '"><i class="fa fa-connectdevelop"></i>' + value.name + '</a></td>\n' +
-        '<td><i class="fa fa-scribd"></i>' + value.sector_name + '</td>\n' +
-        '      <td><i class=" fa fa-fort-awesome"></i>' + value.market_name + '</td>\n' +
-        '      <td><i class="fa fa-calendar"></i> ' + value.date + '</td>\n' +
-        '      <td><i class="fa fa-btc"></i> ' + value.p_kari + '</td>\n' +
+        '<td class="icon bird"><div>' +
+        '<a href="' + value.url + '"><i class="fa fa-connectdevelop"></i>' + value.name + '</a></div></td>\n' +
+        '<td><div style="text-align: center">' + value.sector_name + '</div></td>\n' +
+        '      <td><div style="text-align: center">' + value.market_name + '</div></td>\n' +
+        '      <td><div style="text-align: center"> ' + value.date + '</div></td>\n' +
+        '      <td><div style="text-align: center">' + value.p_kari + '</div></td>\n' +
         '      </tr>');
     });
 

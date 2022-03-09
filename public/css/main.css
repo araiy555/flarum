@@ -110,7 +110,9 @@ table{
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-}
+  table-layout: fixed;
+  white-space: nowrap;}
+
 .scroll-table {
   overflow: auto;
   white-space: nowrap;
@@ -126,8 +128,16 @@ table tr:hover{
   background-color: #d4f0fd;
 }
 
-table th,table td{
-  text-align: left;
+
+table td div{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table th ,table td {
+  text-align: center;
   width: 25%;
   padding: 5px 0;
 }
