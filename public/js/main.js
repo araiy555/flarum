@@ -415,11 +415,11 @@ if (url === '/p/6-cheap') {
             stock_name = value.overview;
           }
           $('#osusume').append('' +
-            '    <tr><td> <a href="/p/9-search?value=' + value.symbol + '"><i class="fa fa-connectdevelop"></i>' + stock_name + '</a></td>\n' +
-            '      <td>EPS ' + value.eps + '</a></td>\n' +
-            '      <td>PER ' + value.per + '倍</td>\n' +
-            '      <td>PBR ' + value.pbr + '</td>\n' +
-            '      <td>ROE ' + value.roe + '％</td>\n' +
+            '    <tr><td> <div><a href="/p/9-search?value=' + value.symbol + '"><i class="fa fa-connectdevelop"></i>' + stock_name + '</a></div></td>\n' +
+            '      <td><div style="text-align: center">EPS ' + value.eps + '</a></div></td>\n' +
+            '      <td><div style="text-align: center">PER ' + value.per + '倍</div></td>\n' +
+            '      <td><div style="text-align: center">PBR ' + value.pbr + '</div></td>\n' +
+            '      <td><div style="text-align: center">ROE ' + value.roe + '％</div></td>\n' +
             '      </tr>');
         });
       }).fail(function (data) {
