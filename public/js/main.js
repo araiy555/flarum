@@ -416,10 +416,10 @@ if (url === '/p/6-cheap') {
           }
           $('#osusume').append('' +
             '    <tr><td> <div><a href="/p/9-search?value=' + value.symbol + '"><i class="fa fa-connectdevelop"></i>' + stock_name + '</a></div></td>\n' +
-            '      <td><div style="text-align: center">EPS ' + value.eps + '</a></div></td>\n' +
-            '      <td><div style="text-align: center">PER ' + value.per + '倍</div></td>\n' +
-            '      <td><div style="text-align: center">PBR ' + value.pbr + '</div></td>\n' +
-            '      <td><div style="text-align: center">ROE ' + value.roe + '％</div></td>\n' +
+            '      <td><div style="text-align: center"> ' + value.eps + '</a></div></td>\n' +
+            '      <td><div style="text-align: center"> ' + value.per + '倍</div></td>\n' +
+            '      <td><div style="text-align: center"> ' + value.pbr + '</div></td>\n' +
+            '      <td><div style="text-align: center"> ' + value.roe + '％</div></td>\n' +
             '      </tr>');
         });
       }).fail(function (data) {
@@ -436,10 +436,10 @@ if (url === '/p/6-cheap') {
       }
       $('#osusume').append('' +
         '    <tr><td><div><a href="/p/9-search?value=' + value.symbol + '"><i class="fa fa-connectdevelop"></i>' + stock_name+ '</a></div></td>\n' +
-        '      <td><div style="text-align: center">EPS ' + value.eps + '</div></td>\n' +
-        '      <td><div style="text-align: center">PER ' + value.per + '倍</div></td>\n' +
-        '      <td><div style="text-align: center">PBR ' + value.pbr + '</div></td>\n' +
-        '      <td><div style="text-align: center">ROE ' + value.roe + '％</div></td>\n' +
+        '      <td><div style="text-align: center"> ' + value.eps + '</div></td>\n' +
+        '      <td><div style="text-align: center"> ' + value.per + '倍</div></td>\n' +
+        '      <td><div style="text-align: center"> ' + value.pbr + '</div></td>\n' +
+        '      <td><div style="text-align: center">' + value.roe + '％</div></td>\n' +
         '      </tr>');
     });
     $('.colorGroup').on('click', function () {
