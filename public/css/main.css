@@ -241,7 +241,9 @@ footer{
   display:flex;
   flex-direction: column;
   padding: 20px;
-  border-bottom: solid 3px #555;/*下線*/
+  border: solid 1px #555;/*下線*/
+  margin:5px;
+  border-radius: 5px;
 }
 
 .text {
@@ -258,10 +260,13 @@ h3 {
 .pict {
   text-align: center;
   min-height: 0%;
+  object-fit: contain;
 }
 
 .pict img {
-  height:auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .description {
