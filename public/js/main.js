@@ -167,7 +167,6 @@ if (url === '/p/9-search') {
     cache: false,
     data: {search: getParam('value')}
   }).done(function (data) {
-
       if (!data.length) {
          alert('一致する情報は見つかりませんでした。');
       }
@@ -195,7 +194,7 @@ if (url === '/p/9-search') {
       $('#open_price').text(open_price);
       $('#high_price').text(high_price);
       $('#low_price').text(low_price);
-      $('#volume').text(volume);
+      $('#volume').text(volume.toLocaleString() + '株');
       $('#trading_price').text(data[0].trading_price);
       let info = JSON.parse(data[0].info);
 
@@ -214,19 +213,14 @@ if (url === '/p/9-search') {
       let test = $("<img>").attr("src", info.logo_url);
 
       $('.price-box__img').append(test);
-      $('#marketCap').text(info.marketCap);
-      let returnOnEquity = info.returnOnEquity * 100;
-      $('#roe').text(Math.round(returnOnEquity) + '%');
-
-      $('#sharesOutstanding').text(info.sharesOutstanding);
+      $('#marketCap').text(info.marketCap.toLocaleString() + '円');
+      $('#sharesOutstanding').text(info.sharesOutstanding.toLocaleString()+ '枚');
       $('#dividend').text(info.dividendYield);
       $('#short_ratio').text(info.shortRatio);
-
-
-      $('#eps').text(info.trailingEps);
-      let test3 = closing_price / info.trailingEps;
-
-      $('#per').text(parseInt(test3, 10) + '倍');
+      $('#roe').text(data[0].roe + '%');
+      $('#eps').text(data[0].eps);
+      $('#per').text(data[0].per + '倍');
+      $('#pbr').text(data[0].pbr);
 
       let test2 = [];
 
