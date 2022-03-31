@@ -53,6 +53,7 @@ header.Hero.PageHero {
   display: -ms-flexbox; /* IE10 */
   flex-wrap: wrap;
   -ms-flex-wrap: wrap; /* IE10 */
+  white-space: normal;
 }
 
 .col_4 > div {
@@ -251,11 +252,11 @@ footer{
   text-align: left;
 }
 
-h3 {
-  white-space: normal;
-  font-size: 17px;
-  margin: 0;
-}
+/*h3 {*/
+/*  white-space: normal;*/
+/*  font-size: 17px;*/
+/*  margin: 0;*/
+/*}*/
 
 .pict {
   text-align: center;
@@ -271,7 +272,6 @@ h3 {
 
 .description {
   white-space: normal;
-  width: 630px;
 }
 .time{
   float: left;
@@ -637,4 +637,100 @@ h6 span {
   border: 1px solid #232323;
   background: #555555;
   color: #fff;
+}
+
+ul.horizontal-list {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+li.item {
+  width: 20%;
+  height: 100px;
+  margin: 16px;
+  font-size: 48px;
+  color: #fff;
+  background-color: #ff5a5f;
+}
+
+.R163_title{
+  border-bottom: solid 1px #333 !important;
+  padding-bottom: 7px !important;
+  margin-bottom: 20px !important;
+}
+.R163_title {
+  font-family: "Hiragino Sans",Meiryo,sans-serif !important;
+  font-size: 18px !important;
+  color: #333 !important;
+  line-height: 1.1 !important;
+  text-align: left !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: 600 !important;
+}
+
+.listA .container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listA article{
+  flex-grow: 1;
+  display: flex;
+}
+
+.listA h2 {
+  font-size: 18px;
+  width: 200px;
+  white-space: normal;
+  text-align: center;
+}
+
+.listA p {
+  font-size: 14px;
+  opacity: 0.8;
+  width: 200px;
+  white-space: normal;
+}
+
+.listA .photo {
+  min-height: 190px;
+  background-position: center;
+  background-size: cover;
+}
+
+.listA a {
+  flex: 1;
+  margin: 10px;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.listA a:hover {
+  opacity: 0.8;
+}
+
+.listA .text {
+  margin: 10px;
+  text-align: -webkit-center;
+}
+
+.top-tag {
+  display: inline-block;
+  margin: 0 .1em .6em 0;
+  padding: .6em;
+  line-height: 1;
+  text-decoration: none;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #555;
+  border-radius: 2em;
+}
+.top-tag:before {
+  content: "#";
+}
+
+.tags {
+  text-align: center;
+  white-space: normal  ;
 }
