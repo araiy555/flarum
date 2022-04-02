@@ -167,6 +167,8 @@ if (url === '/p/9-search') {
     cache: false,
     data: {search: getParam('value')}
   }).done(function (data) {
+
+
       if (!data.length) {
          alert('一致する情報は見つかりませんでした。');
       }
@@ -504,3 +506,17 @@ function getParam(name, url) {
 }
 
 
+function inquiry(){
+  Email.send({
+    Host : "smtp.sendgrid.net",
+    Username : "apikey",
+    Password : "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",
+    To : 'fakemash777@gmail.com',
+    From : $('#mail').val(),
+    Subject : "お問い合わせ：" + $('#name').val(),
+    Body : "メッセージ：" + $('#message').val() + "<br>" +
+      '電話番号：' + $('#phone').val()
+  }).then(
+    message => alert(message)
+  );
+}

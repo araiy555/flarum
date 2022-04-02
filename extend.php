@@ -31,7 +31,9 @@ return [
 <script data-ad-client="ca-pub-3518678681279293" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>  
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3518678681279293"
      crossorigin="anonymous"></script>
-<script src="/js/main.js"></script>           
+<script src="/js/main.js"></script>        
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+   
 <link rel="stylesheet" href="/css/main.css">
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 ';
