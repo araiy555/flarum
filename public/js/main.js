@@ -517,6 +517,6 @@ function inquiry(){
     Body : "メッセージ：" + $('#message').val() + "<br>" +
       '電話番号：' + $('#phone').val()
   }).then(
-    message => alert('送信致しました。<br>お問い合わせありがとうございました。')
+    message => alert('お問い合わせありがとうございました。')
   );
 }
