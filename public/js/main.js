@@ -518,5 +518,6 @@ function inquiry(){
       '電話番号：' + $('#phone').val()
   }).then(
     message => alert('お問い合わせありがとうございました。')
+
   );
 }
