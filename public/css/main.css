@@ -1,4 +1,6 @@
-
+.App{
+  overflow-x: visible;
+}
 header.Hero.PageHero {
   display: none;
 }
