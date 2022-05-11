@@ -4,7 +4,16 @@ fa.href = "/stocktown.ico";
 
 
 if (url === '/') {
-
+  $.ajax({
+    url: 'https://stocktown.versus.jp/api/moneyorder.php',
+    type: 'GET',
+    dataType: 'json',
+    cache: false,
+  }).done(function (data) {
+    console.log(data);
+  }).fail(function (data) {
+    alert('通信失敗！');
+  });
 
   $(document).on('input', '#search-text', function (e) {
     $.ajax({
@@ -23,7 +32,7 @@ if (url === '/') {
     });
   });
 }
-;
+
 
 if (url === '/p/7-market-average') {
 

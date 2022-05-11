@@ -775,3 +775,92 @@ li.item {
   text-align: center;
   white-space: normal  ;
 }
+
+/* 横スクロール */
+.horizontal_scroll {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 0 12px 8px;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* 画面幅が768px以上の場合、横スクロールを解除 */
+@media screen and (min-width: 768px) {
+  .horizontal_scroll {
+    overflow-x: inherit;
+    padding: 0 8px 6px; } }
+
+.horizontal_scroll > li {
+  width: 100%;
+  min-width: 140px; }
+
+@media screen and (min-width: 768px) {
+  .horizontal_scroll > li {
+    min-width: inherit; } }
+
+.horizontal_scroll > li:not(:last-child) {
+  margin-right: 5px; }
+
+.horizontal_scroll > li:last-child {
+  padding-right: 5px; }
+
+@media screen and (min-width: 768px) {
+  .horizontal_scroll > li:last-child {
+    padding-right: 0; } }
+
+.horizontal_scroll img {
+  vertical-align: bottom; }
+
+/* タイトル */
+.slider_ttl {
+  color: #333;
+  text-align: inherit;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: inherit;
+  margin: 0 0 20px 0;
+  background-color: #e5e5e5;
+  text-indent: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  box-sizing: border-box; }
+
+/* 順位 */
+.rank li {
+  counter-increment: rank; }
+.rank li::before {
+  content: counter(rank) "位";
+  color: #bf0000;
+  font-weight: 700;
+  line-height: initial; }
+
+/* 価格 */
+.price {
+  color: #bf0000;
+  line-height: 1.65;
+  font-size: 13px;
+  margin-top: 4px; }
+
+.price span::after {
+  content: '送料無料';
+  display: inline-block;
+  background: #bf0000;
+  color: #fff;
+  font-size: .45em;
+  line-height: 1.25;
+  vertical-align: middle;
+  box-sizing: border-box;
+  padding: .2em .4em; }
+
+.price span.shipping::after {
+  content: '送料別';
+  background: 0 0;
+  color: #000; }
+
+.price small {
+  font-size: .45em;
+  color: #000;
+  margin-right: .5em;
+}
+
