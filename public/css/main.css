@@ -283,7 +283,7 @@ footer{
   display:flex;
   flex-direction: column;
   padding: 20px;
-  border: solid 1px #555;/*下線*/
+  border-bottom: solid 1px #555;/*下線*/
   margin:5px;
   border-radius: 5px;
 }
@@ -425,6 +425,11 @@ footer{
   margin: 0;
   padding: 0;
 }
+.box26 table tr td {
+
+  white-space: normal;
+}
+
 
 
 /*タブ切り替え全体のスタイル*/
@@ -853,3 +858,7 @@ li.item {
   margin-right: .5em;
 }
 
+
+#drawer fdiv .container{
+  width: 0;
+}
