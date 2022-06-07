@@ -19,7 +19,7 @@ window.setTimeout(function () {
       const MAX_LENGTH = 30; //文字数上限
       let modStr = value.title;
       let description = value.description;
-      let images = '<img style="width: 100px; height: 100px; border-radius: 10px;" src="' + value.urlToImage + '">';
+      let images = '<img style="width: 100px; height: 100px; border-radius: 10px;" src="' + value.urlToImage + '" onerror="this.src=\'/Images/alternate.png\'"/ >';
 
       if (value.title.length > MAX_LENGTH) {
         modStr = value.title.substr(0, MAX_LENGTH) + '...'
@@ -201,7 +201,7 @@ if (url === '/p/7-market-average') {
 }
 
 
-if (url === '/p/9-search') {
+if (url.match('stock')) {
 
 
   $.ajax({
@@ -212,8 +212,6 @@ if (url === '/p/9-search') {
     cache: false,
     data: {search: getParam('value')}
   }).done(function (data) {
-
-
       if (!data.length) {
         alert('一致する情報は見つかりませんでした。');
       }
@@ -257,9 +255,9 @@ if (url === '/p/9-search') {
       // $('#bps').text(bps);
 
 
-      let test = $("<img>").attr("src", info.logo_url);
+      let images = '<img style="width: 100px; height: 100px; border-radius: 10px;" src="' + info.logo_url + '" onerror="this.src=\'/Images/alternate.png\'"/>';
 
-      $('.price-box__img').append(test);
+    $('.price-box__img').append(images);
       $('#marketCap').text(info.marketCap.toLocaleString() + '円');
       $('#sharesOutstanding').text(info.sharesOutstanding.toLocaleString() + '枚');
       $('#dividend').text(info.dividendYield);
@@ -383,7 +381,44 @@ if (url === '/p/9-search') {
   });
 }
 
-if (url === '/p/4-news') {
+
+if (url.match('search')) {
+  $.ajax({
+    url: 'https://stocktown.versus.jp/api/search_stock.php',
+    type: 'GET',
+    dataType: 'json',
+    async: true,
+    cache: false,
+    data: {search: getParam('value')}
+  }).done(function (data) {
+
+      $.each(data, function (index, value) {
+
+        if (!data.length) {
+          alert('一致する情報は見つかりませんでした。');
+        }
+
+        let info = JSON.parse(value.data);
+
+        $('#search').prepend('' +
+          '<div class="box">\n' +
+          '  <div class="text">\n' +
+          '    <h3><a href="/p/stock?value=' + value.symbol + '">' + value.overview + '</a></h3>\n' +
+          '    <p class="description">' + value.company + '</p>\n' +
+          // '    <p class="time"><i class="far fa-clock"></i>' + value.publishedAt + '</p>\n' +
+          // '    <p class="author"><i class="fas fa-at"></i>' + value.author + '</p>\n' +
+          '  </div>\n' +
+          ' <div class="pict"><img style="width: 100px; height: 100px; border-radius: 10px;" src="' + info.logo_url + '" onerror="this.src=\'/Images/alternate.png\'"/></div>' +
+          '</div>\n');
+
+
+      });
+    }
+  ).fail(function (data) {
+    alert('通信失敗！');
+  });
+}
+if (url.match('news')) {
   $.ajax({
     url: 'https://stocktown.versus.jp/api/news.php',
     type: 'GET',
@@ -400,7 +435,7 @@ if (url === '/p/4-news') {
       const MAX_LENGTH = 30; //文字数上限
       let modStr = value.title;
       let description = value.description;
-      let images = '<img style="width: 100px; height: 100px; border-radius: 10px;" src="' + value.urlToImage + '">';
+      let images = '<img style="width: 100px; height: 100px; border-radius: 10px;" src="' + value.urlToImage + '" onerror="this.src=\'/Images/alternate.png\'"/>';
 
       if (value.title.length > MAX_LENGTH) {
         modStr = value.title.substr(0, MAX_LENGTH) + '...'
@@ -429,7 +464,7 @@ if (url === '/p/4-news') {
 }
 
 
-if (url === '/p/6-cheap') {
+if (url.match('cheap')) {
   $.ajax({
     url: 'https://stocktown.versus.jp/api/cheap.php',
     type: 'GET',
@@ -457,7 +492,7 @@ if (url === '/p/6-cheap') {
             stock_name = value.overview;
           }
           $('#osusume').append('' +
-            '    <tr><td> <div><a href="/p/9-search?value=' + value.symbol + '">' + stock_name + '</a></div></td>\n' +
+            '    <tr><td> <div><a href="/p/23-stock?value=' + value.symbol + '">' + stock_name + '</a></div></td>\n' +
             '      <td><div style="text-align: center"> ' + value.eps + '</a></div></td>\n' +
             '      <td><div style="text-align: center"> ' + value.per + '倍</div></td>\n' +
             '      <td><div style="text-align: center"> ' + value.pbr + '</div></td>\n' +
@@ -477,7 +512,7 @@ if (url === '/p/6-cheap') {
         stock_name = value.overview;
       }
       $('#osusume').append('' +
-        '    <tr><td><div><a href="/p/9-search?value=' + value.symbol + '">' + stock_name + '</a></div></td>\n' +
+        '    <tr><td><div><a href="/p/stock?value=' + value.symbol + '">' + stock_name + '</a></div></td>\n' +
         '      <td><div style="text-align: center"> ' + value.eps + '</div></td>\n' +
         '      <td><div style="text-align: center"> ' + value.per + '倍</div></td>\n' +
         '      <td><div style="text-align: center"> ' + value.pbr + '</div></td>\n' +
@@ -499,7 +534,7 @@ if (url === '/p/6-cheap') {
 }
 
 
-if (url === '/p/5-ipo') {
+if (url.match('ipo')) {
   $.ajax({
     url: 'https://stocktown.versus.jp/api/ipo.php',
     type: 'GET',
@@ -530,13 +565,20 @@ if (url.match('earnings_calendar')) {
     type: 'GET',
     dataType: 'json'
   }).done(function (data) {
-    console.log(data);
+    $.each(data, function (index, value) {
+      $('#osusume').append('' +
+        '<tr>' +
+        '<td class="icon bird"><div>' +
+        '<a href="/p/stock?value=' + value.symbol + '">' + value.overview + '</a></div></td>\n' +
+        '<td><div>' + value.calendar_start + ' ～ ' + value.calendar_end + '</div></td>\n' +
+        '      </tr>');
+    });
+
 
   }).fail(function (data) {
     alert('通信失敗！');
   });
 }
-
 
 function hoge(code) {
   if (13 === code) {
@@ -544,7 +586,7 @@ function hoge(code) {
     const value = textbox.value.trim();
 
     if (value !== '') {
-      window.location.href = '/p/9-search?value=' + value; // 通常の遷移
+      window.location.href = '/p/search?value=' + value; // 通常の遷移
     }
   }
 }
