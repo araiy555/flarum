@@ -31,7 +31,70 @@ if (url === '/') {
       type: 'GET',
       dataType: 'json'
     }).done(function (data) {
-      console.log(data);
+      $.each(data, function (index, value) {
+        console.log(value);
+        if (value['code_name'] === '^N225') {
+          console.log(value['code_name']);
+          $('#n225_rate').append(value['rate'] + '%');
+          $('#n225_today').append(value['today']);
+        }
+
+        if (value['code_name'] === '^NSEI') {
+          $('#NSEI_rate').append(value['rate'] + '%');
+          $('#NSEI_today').append(value['today']);
+        }
+
+        if (value['code_name'] === '^HSI') {
+          $('#HSI_rate').append(value['rate'] + '%');
+          $('#HSI_today').append(value['today']);
+        }
+
+          if (value['code_name'] === '^GSPC') {
+            $('#SP500_rate').append(value['rate'] + '%');
+            $('#SP500_today').append(value['today']);
+          }
+
+        if (value['code_name'] === '^DJI') {
+          $('#DJI_rate').append(value['rate'] + '%');
+          $('#DJI_today').append(value['today']);
+        }
+
+        if (value['code_name'] === '^NDX') {
+          $('#NDX_rate').append(value['rate'] + '%');
+          $('#NDX_today').append(value['today']);
+        }
+
+        if (value['code_name'] === '^VIX') {
+          $('#CBOE_rate').append(value['rate'] + '%');
+          $('#CBOE_today').append(value['today']);
+        }
+
+        if (value['code_name'] === 'USDJPY=X') {
+          $('#USD_rate').append(value['rate'] + '%');
+          $('#USD_today').append(value['today']);
+        }
+
+        if (value['code_name'] === 'EURJPY=X') {
+          $('#EUR_rate').append(value['rate'] + '%');
+          $('#EUR_today').append(value['today']);
+        }
+
+        if (value['code_name'] === 'AUDJPY=X') {
+          $('#AUD_rate').append(value['rate'] + '%');
+          $('#AUD_today').append(value['today']);
+        }
+
+        if (value['code_name'] === 'CADJPY=X') {
+          $('#CAD_rate').append(value['rate'] + '%');
+          $('#CAD_today').append(value['today']);
+        }
+
+        if (value['code_name'] === 'GBPJPY=X') {
+          $('#GBP_rate').append(value['rate'] + '%');
+          $('#GBP_today').append(value['today']);
+        }
+
+      });
     }).fail(function (data) {
       alert('通信失敗！');
     });
