@@ -20,7 +20,6 @@ if (url === '/') {
       });
 
     }).fail(function (data) {
-      alert('通信失敗！');
     });
   });
 
@@ -96,36 +95,14 @@ if (url === '/') {
 
       });
     }).fail(function (data) {
-      alert('通信失敗！');
     });
-
-
-    $.ajax({
-      url: '/api/discussions?page[limit]=5',
-      type: 'GET',
-      dataType: 'json'
-    }).done(function (data) {
-      $('#news_list').append('<tr>\n' +
-        '    <td>日付</td>  \n' +
-        '    <td>タイトル</td>  \n' +
-        '    </tr>');
-      $.each(data.data, function (index, value) {
-        $('#news_list').append('<tr>\n' +
-          '                  <td><a href="/p/6-cheap?market=XTKS&secter=Technology">' + value.attributes.createdAt + '</a></td>\n' +
-          '                  <td><a href="/d/' + value.attributes.slug + '">' + value.attributes.title + '</a></td>\n' +
-          '</tr>');
-      });
-    }).fail(function (data) {
-      alert('通信失敗！');
-    });
-
 
     $.ajax({
       url: 'https://stocktown.versus.jp/api/soaring.php',
       type: 'GET',
       dataType: 'json'
     }).done(function (data) {
-      console.log(data[0]);
+      console.log(data);
       $('#soaring_rize').append('<h1>上昇率</h1>');
       $.each(data[0], function (index, value) {
         $('#soaring_rize_list').append('<tr>\n' +
@@ -134,7 +111,7 @@ if (url === '/') {
           '</tr>');
       });
 
-      $('#soaring_fall').append('<h1>下落率</h1>s');
+      $('#soaring_fall').append('<h1>下落率</h1>');
       $.each(data[1], function (index, value) {
         $('#soaring_fall_list').append('<tr>\n' +
           '<td>' + value.overview + '</td>\n' +
@@ -143,9 +120,27 @@ if (url === '/') {
       });
 
     }).fail(function (data) {
-      alert('通信失敗！');
     });
 
+    $.ajax({
+      url: '/api/discussions?page[limit]=5',
+      type: 'GET',
+      dataType: 'json'
+    }).done(function (data) {
+
+      $('#Bulletin_board').append('<h1>掲示板</h1>');
+      $('#Bulletin_board_list').append('<tr>\n' +
+        '    <td>日付</td>  \n' +
+        '    <td>タイトル</td>  \n' +
+        '    </tr>');
+      $.each(data.data, function (index, value) {
+        $('#Bulletin_board_list').append('<tr>\n' +
+          '                  <td><a href="/p/6-cheap?market=XTKS&secter=Technology">' + value.attributes.createdAt + '</a></td>\n' +
+          '                  <td><a href="/d/' + value.attributes.slug + '">' + value.attributes.title + '</a></td>\n' +
+          '</tr>');
+      });
+    }).fail(function (data) {
+    });
 
     $.ajax({
       url: 'https://stocktown.versus.jp/api/news.php',
@@ -187,10 +182,13 @@ if (url === '/') {
       });
 
     }).fail(function (data) {
-      alert('通信失敗！');
     });
 
-  }, 1000);
+
+
+
+
+  }, 3000);
 
 
 }

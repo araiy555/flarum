@@ -181,6 +181,7 @@ table td div{
 table th ,table td {
   text-align: center;
   padding: 5px 0;
+  white-space: normal;
 }
 
 table td.icon{
@@ -997,7 +998,7 @@ ul {
   display: flex;
   margin: 0 auto;
   max-width: 1024px;
-  width: 100%;
+  width: 80%;
 }
 .slide-box {
   height: auto;
@@ -1034,6 +1035,7 @@ ul {
 .tab-wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .tab-label {
   color: White;
@@ -1056,4 +1058,15 @@ ul {
 /* ラジオボタン非表示 */
 .tab-switch {
   display: none;
+}
+
+
+.soaring_content_A.soaring_content_B {
+  width: 50%;
+  height: 100px;
+}
+
+.soaring_main{
+  width: 100%;
+  display: flex;
 }
