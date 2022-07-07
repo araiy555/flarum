@@ -31,66 +31,65 @@ if (url === '/') {
       dataType: 'json'
     }).done(function (data) {
       $.each(data, function (index, value) {
-        console.log(value);
+
         if (value['code_name'] === '^N225') {
-          console.log(value['code_name']);
           $('#n225_rate').append(value['rate'] + '%');
-          $('#n225_today').append(value['today']);
+          $('#n225_today').append(Math.round(value['today'] * 10));
         }
 
         if (value['code_name'] === '^NSEI') {
           $('#NSEI_rate').append(value['rate'] + '%');
-          $('#NSEI_today').append(value['today']);
+          $('#NSEI_today').append(Math.round(value['today'] * 10));
         }
 
         if (value['code_name'] === '^HSI') {
           $('#HSI_rate').append(value['rate'] + '%');
-          $('#HSI_today').append(value['today']);
+          $('#HSI_today').append(Math.round(value['today'] * 10));
         }
 
           if (value['code_name'] === '^GSPC') {
             $('#SP500_rate').append(value['rate'] + '%');
-            $('#SP500_today').append(value['today']);
+            $('#SP500_today').append(Math.round(value['today'] * 10));
           }
 
         if (value['code_name'] === '^DJI') {
           $('#DJI_rate').append(value['rate'] + '%');
-          $('#DJI_today').append(value['today']);
+          $('#DJI_today').append(Math.round(value['today'] * 10));
         }
 
         if (value['code_name'] === '^NDX') {
           $('#NDX_rate').append(value['rate'] + '%');
-          $('#NDX_today').append(value['today']);
+          $('#NDX_today').append(Math.round(value['today'] * 10));
         }
 
         if (value['code_name'] === '^VIX') {
           $('#CBOE_rate').append(value['rate'] + '%');
-          $('#CBOE_today').append(value['today']);
+          $('#CBOE_today').append(Math.round(value['today'] * 10));
         }
 
         if (value['code_name'] === 'USDJPY=X') {
           $('#USD_rate').append(value['rate'] + '%');
-          $('#USD_today').append(value['today']);
+          $('#USD_today').append(Math.round(value['today'] * 10));
         }
 
         if (value['code_name'] === 'EURJPY=X') {
           $('#EUR_rate').append(value['rate'] + '%');
-          $('#EUR_today').append(value['today']);
+          $('#EUR_today').append(Math.round(value['today'] * 10));
         }
 
         if (value['code_name'] === 'AUDJPY=X') {
           $('#AUD_rate').append(value['rate'] + '%');
-          $('#AUD_today').append(value['today']);
+          $('#AUD_today').append(Math.round(value['today'] * 10));
         }
 
         if (value['code_name'] === 'CADJPY=X') {
           $('#CAD_rate').append(value['rate'] + '%');
-          $('#CAD_today').append(value['today']);
+          $('#CAD_today').append(Math.round(value['today'] * 10));
         }
 
         if (value['code_name'] === 'GBPJPY=X') {
           $('#GBP_rate').append(value['rate'] + '%');
-          $('#GBP_today').append(value['today']);
+          $('#GBP_today').append(Math.round(value['today'] * 10));
         }
 
       });
@@ -102,11 +101,10 @@ if (url === '/') {
       type: 'GET',
       dataType: 'json'
     }).done(function (data) {
-      console.log(data);
       $('#soaring_rize').append('<h1>上昇率</h1>');
       $.each(data[0], function (index, value) {
         $('#soaring_rize_list').append('<tr>\n' +
-          '<td>' + value.overview + '</td>\n' +
+          '<td><a href="/p/stock?value=' + value.symbol + '">' + value.overview + '</a></td>\n' +
           '<td>' + value.soaring_rate + '</td>\n' +
           '</tr>');
       });
@@ -114,7 +112,7 @@ if (url === '/') {
       $('#soaring_fall').append('<h1>下落率</h1>');
       $.each(data[1], function (index, value) {
         $('#soaring_fall_list').append('<tr>\n' +
-          '<td>' + value.overview + '</td>\n' +
+          '<td><a href="/p/stock?value=' + value.symbol + '">' + value.overview + '</a></td>\n' +
           '<td>' + value.soaring_rate + '</td>\n' +
           '</tr>');
       });
@@ -130,13 +128,13 @@ if (url === '/') {
 
       $('#Bulletin_board').append('<h1>掲示板</h1>');
       $('#Bulletin_board_list').append('<tr>\n' +
-        '    <td>日付</td>  \n' +
         '    <td>タイトル</td>  \n' +
+        '    <td>コメント数</td>  \n' +
         '    </tr>');
       $.each(data.data, function (index, value) {
         $('#Bulletin_board_list').append('<tr>\n' +
-          '                  <td><a href="/p/6-cheap?market=XTKS&secter=Technology">' + value.attributes.createdAt + '</a></td>\n' +
-          '                  <td><a href="/d/' + value.attributes.slug + '">' + value.attributes.title + '</a></td>\n' +
+          '   <td><a href="/d/' + value.attributes.slug + '">' + value.attributes.title + '</a></td>\n' +
+          '   <td>' + value.attributes.commentCount + '</td>\n' +
           '</tr>');
       });
     }).fail(function (data) {
