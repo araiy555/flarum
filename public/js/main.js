@@ -34,62 +34,62 @@ if (url === '/') {
 
         if (value['code_name'] === '^N225') {
           $('#n225_rate').append(value['rate'] + '%');
-          $('#n225_today').append(Math.round(value['today'] * 10));
+          $('#n225_today').append(Math.round(value['today'] * 10)/10);
         }
 
         if (value['code_name'] === '^NSEI') {
           $('#NSEI_rate').append(value['rate'] + '%');
-          $('#NSEI_today').append(Math.round(value['today'] * 10));
+          $('#NSEI_today').append(Math.round(value['today'] * 10)/10);
         }
 
         if (value['code_name'] === '^HSI') {
           $('#HSI_rate').append(value['rate'] + '%');
-          $('#HSI_today').append(Math.round(value['today'] * 10));
+          $('#HSI_today').append(Math.round(value['today'] * 10)/10);
         }
 
           if (value['code_name'] === '^GSPC') {
             $('#SP500_rate').append(value['rate'] + '%');
-            $('#SP500_today').append(Math.round(value['today'] * 10));
+            $('#SP500_today').append(Math.round(value['today'] * 10)/10);
           }
 
         if (value['code_name'] === '^DJI') {
           $('#DJI_rate').append(value['rate'] + '%');
-          $('#DJI_today').append(Math.round(value['today'] * 10));
+          $('#DJI_today').append(Math.round(value['today'] * 10)/10);
         }
 
         if (value['code_name'] === '^NDX') {
           $('#NDX_rate').append(value['rate'] + '%');
-          $('#NDX_today').append(Math.round(value['today'] * 10));
+          $('#NDX_today').append(Math.round(value['today'] * 10)/10);
         }
 
         if (value['code_name'] === '^VIX') {
           $('#CBOE_rate').append(value['rate'] + '%');
-          $('#CBOE_today').append(Math.round(value['today'] * 10));
+          $('#CBOE_today').append(Math.round(value['today'] * 10)/10);
         }
 
         if (value['code_name'] === 'USDJPY=X') {
           $('#USD_rate').append(value['rate'] + '%');
-          $('#USD_today').append(Math.round(value['today'] * 10));
+          $('#USD_today').append(Math.round(value['today'] * 10)/10);
         }
 
         if (value['code_name'] === 'EURJPY=X') {
           $('#EUR_rate').append(value['rate'] + '%');
-          $('#EUR_today').append(Math.round(value['today'] * 10));
+          $('#EUR_today').append(Math.round(value['today'] * 10)/10);
         }
 
         if (value['code_name'] === 'AUDJPY=X') {
           $('#AUD_rate').append(value['rate'] + '%');
-          $('#AUD_today').append(Math.round(value['today'] * 10));
+          $('#AUD_today').append(Math.round(value['today'] * 10)/10);
         }
 
         if (value['code_name'] === 'CADJPY=X') {
           $('#CAD_rate').append(value['rate'] + '%');
-          $('#CAD_today').append(Math.round(value['today'] * 10));
+          $('#CAD_today').append(Math.round(value['today'] * 10)/10);
         }
 
         if (value['code_name'] === 'GBPJPY=X') {
           $('#GBP_rate').append(value['rate'] + '%');
-          $('#GBP_today').append(Math.round(value['today'] * 10));
+          $('#GBP_today').append(Math.round(value['today'] * 10)/10);
         }
 
       });
