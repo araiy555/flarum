@@ -101,6 +101,8 @@ if (url === '/') {
           $('#AUD_today').append(Math.round(value['today'] * 10)/10+ ' 円');
         }
 
+
+
         if (value['code_name'] === 'CADJPY=X') {
           $('#CAD_time').append('(' + value['create_at'] + ')');
 
