@@ -541,22 +541,96 @@ if (url.match('search')) {
       if (data.length === 0) {
         alert('一致する情報は見つかりませんでした。');
       }
-      $.each(data, function (index, value) {
-        let info = JSON.parse(value.data);
 
-        $('#search').prepend('' +
-          '<div class="box">\n' +
-          '  <div class="text">\n' +
-          '    <h3><a href="/p/stock?value=' + value.symbol + '">' + value.overview + '</a></h3>\n' +
-          '    <p class="description">' + value.company + '</p>\n' +
-          // '    <p class="time"><i class="far fa-clock"></i>' + value.publishedAt + '</p>\n' +
-          // '    <p class="author"><i class="fas fa-at"></i>' + value.author + '</p>\n' +
-          '  </div>\n' +
-          ' <div class="pict"><img style="width: 100px; height: 100px; border-radius: 10px;" src="' + info.logo_url + '" onerror="this.src=\'/\'"/></div>' +
-          '</div>\n');
+    $.each(data, function (index, value) {
+      let info = JSON.parse(value.data);
+
+      if (value.overview == null) {
+        stock_name = value.stock_name;
+      } else {
+        stock_name = value.overview;
+      }
+
+      let closing_price = parseInt(value.closing_price.replace(/\[/, ' ').replace(/\]/, ' '), 10);
+      let open_price = parseInt(value.open_price.replace(/\[/, ' ').replace(/\]/, ' '), 10);
+      let high_price = parseInt(value.high_price.replace(/\[/, ' ').replace(/\]/, ' '), 10);
+      let low_price = parseInt(value.low_price.replace(/\[/, ' ').replace(/\]/, ' '), 10);
+      let volume = parseInt(value.volume.replace(/\[/, ' ').replace(/\]/, ' '), 10);
 
 
-      });
+      $('#search').append(
+        ' <div class="stock"><div class="pict"><img style="width: 100px; height: 100px; border-radius: 10px;" src="' + info.logo_url + '" onerror="this.src=\'/\'"/></div>' +
+        '    <h3 style="text-align: center"><a href="/p/stock?value=' + value.symbol + '">' + value.overview + '</a></h3>\n' +
+        '<div class="box">\n' +
+        ' <div class="text">\n' +
+        ' <p class="description">' + value.company + '</p>\n' +
+        '<p class="time"><i class="far fa-clock"></i>' + value.update_at + '</p>\n' +
+        '<p class="author"><i class="fas fa-at"></i>' + value.website + '</p>\n' +
+        '  </div>' +
+        '<div class="stock-nav">\n' +
+        '<h6><span id="update_day">前日比（' + value.update_at + '）</span></h6>      \n' +
+        '<table>\n' +
+        '<tr>\n' +
+        '<td >前日終値</td>\n' +
+        '<td id="closing_price">'+ closing_price +'</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>始値</td>\n' +
+        '<td id="open_price">'+open_price+'</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>高値</td>\n' +
+        '<td id="high_price">'+high_price+'</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>安値</td>\n' +
+        '<td id="low_price">'+low_price+'</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>出来高</td>\n' +
+        '<td id="volume">'+volume+'</td>\n' +
+        '</tr>\n' +
+        '</table>\n' +
+        '<h6><span>参考指数</span></h6>\n' +
+        '   \n' +
+        '<table>\n' +
+        '       <tr>\n' +
+        '<td>時価総額</td>\n' +
+        '<td id="marketCap">' + info.marketCap.toLocaleString() + '円' +'</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>発行済株式数</td>\n' +
+        '<td id="sharesOutstanding">' + info.sharesOutstanding.toLocaleString() + '枚' +'</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>PER（株価収益率）</td>\n' +
+        '<td id="per">'+value.per+'倍</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>PBR（株価純資産倍率）</td>\n' +
+        '<td id="pbr">'+value.pbr+'</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>EPS（1株当たりの当期純利益）</td>\n' +
+        '<td id="eps">'+value.eps+'</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>ROE（株主資本利益率）</td>\n' +
+        '<td id="roe">'+value.roe+'%</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>配当利回り</td>\n' +
+        '<td id="dividend">'+ info.dividendYield +'</td>\n' +
+        '</tr>\n' +
+        ' <tr>\n' +
+        '<td>空売り比率</td>\n' +
+        '<td id="short_ratio">'+info.shortRatio+'</td>\n' +
+        '</tr>\n' +
+        '</table>\n' +
+        '</div><hr>' +
+        '</div></div>' );
+    });
+
     }
   ).fail(function (data) {
     alert('通信失敗！');
@@ -636,11 +710,11 @@ if (url.match('cheap')) {
             stock_name = value.overview;
           }
           $('#osusume').append('' +
-            '    <tr><td> <div><a href="/p/23-stock?value=' + value.symbol + '">' + stock_name + '</a></div></td>\n' +
-            '      <td><div style="text-align: center"> ' + value.eps + '</a></div></td>\n' +
-            '      <td><div style="text-align: center"> ' + value.per + '倍</div></td>\n' +
-            '      <td><div style="text-align: center"> ' + value.pbr + '</div></td>\n' +
-            '      <td><div style="text-align: center"> ' + value.roe + '％</div></td>\n' +
+            '    <tr><td><div><a href="/p/stock?value=' + value.symbol + '">' + stock_name + '</a></div></td>\n' +
+            '      <td><div class="stocktown-eps" style="text-align: center"> ' + value.eps + '</div></td>\n' +
+            '      <td><div class="stocktown-per" style="text-align: center"> ' + value.per + '倍</div></td>\n' +
+            '      <td><div class="stocktown-pbr" style="text-align: center"> ' + value.pbr + '</div></td>\n' +
+            '      <td><div class="stocktown-roe" style="text-align: center">' + value.roe + '％</div></td>\n' +
             '      </tr>');
         });
       }).fail(function (data) {
@@ -657,10 +731,10 @@ if (url.match('cheap')) {
       }
       $('#osusume').append('' +
         '    <tr><td><div><a href="/p/stock?value=' + value.symbol + '">' + stock_name + '</a></div></td>\n' +
-        '      <td><div style="text-align: center"> ' + value.eps + '</div></td>\n' +
-        '      <td><div style="text-align: center"> ' + value.per + '倍</div></td>\n' +
-        '      <td><div style="text-align: center"> ' + value.pbr + '</div></td>\n' +
-        '      <td><div style="text-align: center">' + value.roe + '％</div></td>\n' +
+        '      <td><div class="stocktown-eps" style="text-align: center"> ' + value.eps + '</div></td>\n' +
+        '      <td><div class="stocktown-per" style="text-align: center"> ' + value.per + '倍</div></td>\n' +
+        '      <td><div class="stocktown-pbr" style="text-align: center"> ' + value.pbr + '</div></td>\n' +
+        '      <td><div class="stocktown-roe" style="text-align: center">' + value.roe + '％</div></td>\n' +
         '      </tr>');
     });
     $('.colorGroup').on('click', function () {

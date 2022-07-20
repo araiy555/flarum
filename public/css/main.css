@@ -153,7 +153,8 @@ table{
   border-spacing: 0;
   width: 100%;
   table-layout: fixed;
-  white-space: nowrap;}
+  white-space: nowrap;
+}
 
 .scroll-table {
   overflow: auto;
@@ -184,25 +185,6 @@ table th ,table td {
   white-space: normal;
 }
 
-table td.icon{
-  background-size: 35px;
-  background-position: left 5px center;
-  background-repeat: no-repeat;
-}
-
-table td.icon.bird{
-  background-image: url(icon-bird.png)
-}
-
-table td.icon.whale{
-  background-image: url(icon-whale.png)
-}
-
-table td.icon.crab{
-  background-image: url(icon-crab.png)
-}
-
-
 .demo03 th, .demo03 td	{  text-align: left; }
 @media only screen and (max-width: 480px) {
   .demo03	{ margin: 0 -10px; }
@@ -214,7 +196,6 @@ table td.icon.crab{
   .demo03 th {
     display:block;
     width: 100%;
-
     white-space: normal;
   }
   .demo03 td {
@@ -224,6 +205,22 @@ table td.icon.crab{
     border:none;
     white-space: normal;
   }
+  #stocktown-table {
+    display:none;
+  }
+  .stocktown-eps:before {
+    content: "（1株当たりの当期純利益）";
+  }
+  .stocktown-per:before {
+    content: "（株価収益率）";
+  }
+  .stocktown-pbr:before {
+    content: "（株価純資産倍率）";
+  }
+  .stocktown-roe:before {
+    content: "（株主資本利益率）";
+  }
+
 }
 
 
@@ -1072,3 +1069,32 @@ ul {
   width: 100%;
   display: flex;
 }
+
+.box-menu {
+  display: flex;
+  list-style: none;
+}
+
+.box-menu li {
+  padding: 8px 25px;
+  border-bottom: 1px solid #000000;
+}
+
+/* スタイル適当です */
+.stock-nav {
+  width: 100%;
+}
+
+
+/* スタイル適当です */
+.stock-nav {
+  width: 100%;
+}
+.nav__item {
+  text-align: center;
+  margin: 10px;
+}
+
+
+
+
