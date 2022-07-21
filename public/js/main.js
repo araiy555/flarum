@@ -1,6 +1,18 @@
 let url = location.pathname;
 let fa = document.getElementById("fav");
 fa.href = "/stocktown.ico";
+window.onload = function(){
+  if (url === '/') {
+    $('div#app-navigation.App-navigation').append('<div class="ButtonGroup Dropdown dropdown App-titleControl Dropdown--select itemCount12"><button class="Dropdown-toggle Button" data-toggle="dropdown"><span class="Button-label">STOCKTOWN</span><i class="icon fas fa-sort Button-caret"></i></button><ul class="Dropdown-menu dropdown-menu "><li class="item-allDiscussions active"><a href="/all" active="true" type="button" title="すべてのスレッド" class="hasIcon"><i class="icon far fa-comments Button-icon"></i><span class="Button-label">すべてのスレッド</span></a></li><li class="item-fof-user-directory"><a href="/users" active="false" type="button" title="ユーザー一覧" class="hasIcon"><i class="icon far fa-address-book Button-icon"></i><span class="Button-label">ユーザー一覧</span></a></li><li class="item-rankings"><a href="/rankings" active="false" type="button" title="ランキング" class="hasIcon"><i class="icon fas fa-trophy Button-icon"></i><span class="Button-label">ランキング</span></a></li><li class="item-following"><a href="/following" active="false" type="button" title="フォロー中" class="hasIcon"><i class="icon fas fa-star Button-icon"></i><span class="Button-label">フォロー中</span></a></li><li class="item-tags"><a href="/tags" active="false" type="button" title="タグ" class="hasIcon"><i class="icon fas fa-th-large Button-icon"></i><span class="Button-label">タグ</span></a></li><li class="Dropdown-separator"></li><li class="item-tag1"><a class="TagLinkButton hasIcon" href="/t/column" title="" style=""><span class="Button-icon icon TagIcon" style="background-color: rgb(85, 85, 85);"></span><span class="Button-label">コラム</span></a></li><li class="item-tag2"><a class="TagLinkButton hasIcon" href="/t/Technique" title="" style=""><span class="Button-icon icon TagIcon" style=""></span><span class="Button-label">チャート・テクニック</span></a></li><li class="item-tag6"><a class="TagLinkButton hasIcon" href="/t/External factors" title="" style=""><span class="Button-icon icon TagIcon" style=""></span><span class="Button-label">相場・外部要因</span></a></li><li class="item-tag3"><a class="TagLinkButton hasIcon" href="/t/terminology" title="" style=""><span class="Button-icon icon TagIcon" style=""></span><span class="Button-label">用語</span></a></li><li class="item-tag4"><a class="TagLinkButton hasIcon" href="/t/contact" title="" style=""><span class="Button-icon icon TagIcon" style=""></span><span class="Button-label">お問い合わせ</span></a></li><li class="item-tag5"><a class="TagLinkButton hasIcon" href="/t/faq" title="" style=""><span class="Button-icon icon TagIcon" style=""></span><span class="Button-label">FAQ</span></a></li></ul></div>');
+    // $('div#app-navigation.App-navigation').append('<li class="App-primaryControl item-newDiscussion"><button class="Button Button--primary IndexPage-newDiscussion hasIcon" itemclassname="App-primaryControl" type="button" title="スレッドの作成"><i class="icon fas fa-edit Button-icon"></i><span class="Button-label">スレッドの作成</span></button></li>\n');
+  }
+  if (url.match('stock')) {
+    $('div#app-navigation.App-navigation').append('<div class="ButtonGroup Dropdown dropdown App-titleControl Dropdown--select itemCount12"><button class="Dropdown-toggle Button" data-toggle="dropdown"><span class="Button-label">STOCKTOWN</span><i class="icon fas fa-sort Button-caret"></i></button><ul class="Dropdown-menu dropdown-menu "><li class="item-allDiscussions active"><a href="/all" active="true" type="button" title="すべてのスレッド" class="hasIcon"><i class="icon far fa-comments Button-icon"></i><span class="Button-label">すべてのスレッド</span></a></li><li class="item-fof-user-directory"><a href="/users" active="false" type="button" title="ユーザー一覧" class="hasIcon"><i class="icon far fa-address-book Button-icon"></i><span class="Button-label">ユーザー一覧</span></a></li><li class="item-rankings"><a href="/rankings" active="false" type="button" title="ランキング" class="hasIcon"><i class="icon fas fa-trophy Button-icon"></i><span class="Button-label">ランキング</span></a></li><li class="item-following"><a href="/following" active="false" type="button" title="フォロー中" class="hasIcon"><i class="icon fas fa-star Button-icon"></i><span class="Button-label">フォロー中</span></a></li><li class="item-tags"><a href="/tags" active="false" type="button" title="タグ" class="hasIcon"><i class="icon fas fa-th-large Button-icon"></i><span class="Button-label">タグ</span></a></li><li class="Dropdown-separator"></li><li class="item-tag1"><a class="TagLinkButton hasIcon" href="/t/column" title="" style=""><span class="Button-icon icon TagIcon" style="background-color: rgb(85, 85, 85);"></span><span class="Button-label">コラム</span></a></li><li class="item-tag2"><a class="TagLinkButton hasIcon" href="/t/Technique" title="" style=""><span class="Button-icon icon TagIcon" style=""></span><span class="Button-label">チャート・テクニック</span></a></li><li class="item-tag6"><a class="TagLinkButton hasIcon" href="/t/External factors" title="" style=""><span class="Button-icon icon TagIcon" style=""></span><span class="Button-label">相場・外部要因</span></a></li><li class="item-tag3"><a class="TagLinkButton hasIcon" href="/t/terminology" title="" style=""><span class="Button-icon icon TagIcon" style=""></span><span class="Button-label">用語</span></a></li><li class="item-tag4"><a class="TagLinkButton hasIcon" href="/t/contact" title="" style=""><span class="Button-icon icon TagIcon" style=""></span><span class="Button-label">お問い合わせ</span></a></li><li class="item-tag5"><a class="TagLinkButton hasIcon" href="/t/faq" title="" style=""><span class="Button-icon icon TagIcon" style=""></span><span class="Button-label">FAQ</span></a></li></ul></div>');
+    // $('div#app-navigation.App-navigation').append('<li class="App-primaryControl item-newDiscussion"><button class="Button Button--primary IndexPage-newDiscussion hasIcon" itemclassname="App-primaryControl" type="button" title="スレッドの作成"><i class="icon fas fa-edit Button-icon"></i><span class="Button-label">スレッドの作成</span></button></li>\n');
+  }
+
+}
+
 
 
 if (url === '/') {
@@ -30,9 +42,7 @@ if (url === '/') {
       type: 'GET',
       dataType: 'json'
     }).done(function (data) {
-      console.log(data);
       $.each(data, function (index, value) {
-
         if (value['code_name'] === '^N225') {
 
           $('#n225_time').append('(' + value['create_at'] + ')');
@@ -211,7 +221,7 @@ if (url === '/') {
 
 
 
-  }, 3000);
+  }, 2000);
 
 
 }
@@ -828,18 +838,21 @@ function getParam(name, url) {
 
 
 function inquiry() {
-  Email.send({
-    Host: "smtp.sendgrid.net",
-    Username: "apikey",
-    Password: "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",
-    To: 'fakemash777@gmail.com',
-    From: $('#mail').val(),
-    Subject: "お問い合わせ：" + $('#name').val(),
-    Body: "メッセージ：" + $('#message').val() + "<br>" +
-      '電話番号：' + $('#phone').val()
-  }).then(
-    message => alert('お問い合わせありがとうございました。')
-  );
+  $.ajax({
+    url: 'https://stocktown.versus.jp/api/sendgrid.php',
+    type: 'GET',
+    dataType: 'json',
+    data: {
+      name:  $('#name').val(),
+      message:  $('#message').val(),
+      phone: $('#phone').val(),
+      mail: $('#mail').val()
+    }
+  }).done(function (data) {
+    alert(data);
+  }).fail(function (data) {
+    alert(data);
+  });
 }
 
 

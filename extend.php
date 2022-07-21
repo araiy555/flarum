@@ -36,7 +36,7 @@ return [
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="/js/main.js"></script>        
+<script src="/js/main.js" defer></script>        
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <link rel="stylesheet" href="/css/main.css">
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
