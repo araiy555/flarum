@@ -250,7 +250,7 @@ if (url === '/') {
           '    <p class="time"><i class="far fa-clock"></i>' + value.publishedAt + '</p>\n' +
           '    <p class="author"><i class="fas fa-at"></i>' + value.author + '</p>\n' +
           '  </div>\n' +
-          ' <div class="pict">' + images + '</div>' +
+          ' <div class="pict"></div>' +
           '</div>\n');
       });
 
