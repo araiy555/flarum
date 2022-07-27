@@ -43,6 +43,13 @@ article div .Post-body blockquote {
   font-size: 19px;
 }
 
+.Hero-close {
+  float: right;
+  margin-top: -10px;
+  color: inherit;
+  opacity: 0.5;
+  display: none !important;
+}
 
 @media screen and (min-width: 960px) {
   h1.Header-title a {
